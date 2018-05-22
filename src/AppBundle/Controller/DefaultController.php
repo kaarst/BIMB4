@@ -33,7 +33,7 @@ class DefaultController extends Controller
      * @Route("/zeg/nogeens/hallo", name="zeghallo")
      */
 	 public function zegHallo(Request $request){
-		 return new Response("Hallo jij daar!");
+		 return new Response("Test of het werkt!");
 	 }
 
 	 /**
