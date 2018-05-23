@@ -17,7 +17,7 @@ class BestelOrder
    *
    * @ORM\Column(name="bestelnummer", type="integer", unique=true)
     * @ORM\Id
-   * 
+   *
    */
   private $bestelnummer;
 
@@ -28,7 +28,12 @@ class BestelOrder
      */
     private $leverancier;
 
-
+    /**
+    *@var int
+    *
+    *@ORM\OneToMany(targetEntity="BestelRegel", mappedBy="BestelOrder")
+    */
+    private $bestelregels;
 
     /**
      * @var string
@@ -68,6 +73,31 @@ class BestelOrder
     {
         return $this->leverancier;
     }
+
+    /**
+     * Set bestelregels
+     *
+     * @param integer $bestelregels
+     *
+     * @return BestelOrder
+     */
+    public function setBestelregels($bestelregels)
+    {
+        $this->bestelregels = $bestelregels;
+
+        return $this;
+    }
+
+    /**
+     * Get bestelregels
+     *
+     * @return int
+     */
+    public function getBestelregels()
+    {
+        return $this->BestelRegels;
+    }
+
 
     /**
      * Set bestelnummer

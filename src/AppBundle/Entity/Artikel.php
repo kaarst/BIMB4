@@ -20,6 +20,14 @@ class Artikel
     private $artikelnummer;
 
     /**
+    * @var int
+    *
+    *@ORM\OneToMany(targetEntity="BestelRegel", mappedBy="artikel")
+    */
+
+    private $bestelregels;
+
+    /**
      * @var string
      *
      * @ORM\Column(name="Omschrijving", type="string", length=255)
@@ -108,8 +116,33 @@ class Artikel
     public function getArtikelnummer()
     {
         return $this->artikelnummer;
+
     }
 
+    /**
+     * Set BestelRegels
+     *
+     * @param integer $bestelregels
+     *
+     * @return Artikel
+     */
+    public function setBestelregels($bestelregels)
+    {
+        $this->bestelregels = $bestelregels;
+
+        return $this;
+    }
+
+    /**
+     * Get BestelRegels
+     *
+     * @return int
+     */
+    public function getBestelregels()
+    {
+        return $this->bestelregels;
+
+    }
     /**
      * Set omschrijving
      *
@@ -302,4 +335,3 @@ class Artikel
         return $this->bestelserie;
     }
 }
-
