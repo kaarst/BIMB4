@@ -18,7 +18,7 @@ security:
                   roles: 'ROLE_INKOOP'
 
     access_control:
-      - { path: ^/artikel/nieuw, roles: ROLE_MAGAZIJN }
+      - { path: ^/artikel/nieuw, roles: ROLE_INKOOP }
       - { path: ^/artikel/wijzig/*, roles: ROLE_INKOOP }
       - { path: ^/bestelorder/nieuw, roles: ROLE_INKOOP }
 

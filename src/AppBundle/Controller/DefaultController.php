@@ -95,26 +95,30 @@ class DefaultController extends Controller
 
 		return new Response($this->renderView('form.html.twig', array('form' => $form->createView())));
 	}
+  /**
+  * @Route("/artikel/nieuw", name="nieuwartikel")
+  */
+  	public function nieuwArtikel(Request $request) {
+  		$nieuwArtikel = new Artikel();
+  		$form = $this->createForm(ArtikelNieuwType::class, $nieuwArtikel);
 
-/**
-	 * @Route("/artikel/nieuw", name="nieuwartikel")
-	 */
-	public function nieuwArtikel(Request $request) {
-		$nieuwArtikel = new Artikel();
-		$form = $this->createForm(ArtikelNieuwType::class, $nieuwArtikel);
+  		$form->handleRequest($request);
+  		if ($form->isSubmitted() && $form->isValid()) {
+  			if ($nieuwArtikel->getMinimumVoorraad() > $nieuwArtikel->getAantalVoorraad()){
+                  $nieuwArtikel->setBestelserie($nieuwArtikel->getMinimumVoorraad() - $nieuwArtikel->getAantalVoorraad());
+              } else{
+                  $nieuwArtikel->setBestelserie(0);
+              }
+  			$em = $this->getDoctrine()->getManager();
+  			$em->persist($nieuwArtikel);
+  			$em->flush();
+  			return $this->redirect($this->generateurl("nieuwartikel"));
+  		}
 
-		$form->handleRequest($request);
-		if ($form->isSubmitted() && $form->isValid()) {
-			$em = $this->getDoctrine()->getManager();
-			$em->persist($nieuwArtikel);
-			$em->flush();
-			return $this->redirect($this->generateurl("nieuwartikel"));
-		}
+  		return new Response($this->renderView('form.html.twig', array('form' => $form->createView())));
+  	}
 
-		return new Response($this->renderView('form.html.twig', array('form' => $form->createView())));
-	}
-
-		/**
+  /**
 	 * @Route("/artikel/wijzig/{artikelnummer}", name="artikelwijzigen")
 	 */
 	public function wijzigArtikel(Request $request, $artikelnummer) {
@@ -123,6 +127,11 @@ class DefaultController extends Controller
 
 		$form->handleRequest($request);
 		if ($form->isSubmitted() && $form->isValid()) {
+			if ($bestaandArtikel->getMinimumVoorraad() > $bestaandArtikel->getAantalVoorraad()){
+                $bestaandArtikel->setBestelserie($bestaandArtikel->getMinimumVoorraad() - $bestaandArtikel->getAantalVoorraad());
+            } else{
+                $bestaandArtikel->setBestelserie(0);
+            }
 			$em = $this->getDoctrine()->getManager();
 			$em->persist($bestaandArtikel);
 			$em->flush();
@@ -156,7 +165,7 @@ class DefaultController extends Controller
       $artikelen = $this->getDoctrine()->getRepository("AppBundle:Artikel")->findAll();
       $tekst = "";
        foreach($artikelen as $artikel){
-         $tekst = $tekst . "Artikelnummer: " .
+         $tekst = $tekst . "test: " .
          $artikel->getArtikelnummer() . ",  Omschrijving: " .
          $artikel->getOmschrijving() . ",  Magazijnlocatie: " .
          $artikel->getMagazijnlocatie() . ",  Inkoopprij: " .
@@ -169,6 +178,22 @@ class DefaultController extends Controller
        }
       return new Response($tekst);
     }
+
+
+    /**
+    * @Route ("/artikel/voorraad", name="artikelvoorraad")
+    */
+    public function artikelvoorraad(Request $request){
+      $artikelen = $this->getDoctrine()->getRepository("AppBundle:Artikel")->findAll();
+      $tekst = "";
+       foreach($artikelen as $artikel){
+         $tekst = $tekst .
+         $artikel->getVoorverkopen() .
+         "<br />";
+       }
+      return new Response($tekst);
+    }
+
 
 }
 

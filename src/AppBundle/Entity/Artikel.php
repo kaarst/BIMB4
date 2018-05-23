@@ -75,6 +75,20 @@ class Artikel
      */
     private $bestelserie;
 
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="Voorinkopen", type="integer", nullable=true)
+     */
+    private $voorinkopen;
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="Voorverkopen", type="integer", nullable=true)
+     */
+    private $voorverkopen;
+
 
     /**
      * Get id
@@ -301,5 +315,52 @@ class Artikel
     {
         return $this->bestelserie;
     }
-}
 
+    /**
+     * Set bestelserie
+     *
+     * @param integer $voorinkopen
+     *
+     * @return Artikel
+     */
+    public function setvoorinkopen($voorinkopen)
+    {
+        $this->voorinkopen = $v;
+
+        return $this;
+    }
+
+    /**
+     * Get bestelserie
+     *
+     * @return int
+     */
+    public function getVoorinkopen()
+    {
+        return $this->voorinkopen;
+    }
+
+    /**
+     * Set bestelserie
+     *
+     * @param integer $voorverkopen
+     *
+     * @return Artikel
+     */
+    public function setVoorverkopen($voorverkopen)
+    {
+        $this->voorverkopen = $v;
+
+        return $this;
+    }
+
+    /**
+     * Get bestelserie
+     *
+     * @return int
+     */
+    public function getVoorverkopen()
+    {
+        return $this->voorverkopen;
+    }
+}
