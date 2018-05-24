@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+
+	<h1  class="welkominkoper">Welkom, inkoper!</h1>
+	<div class="content">
+		<div id="userlinks-div">
+			<p>
+
+
+				<a class="userlinks" href="{{ path('nieuwartikel') }}">Artikel toevoegen</a> <br />
+				<a class="userlinks" href="{{ path('alleartikelen') }}">Alle artikelen</a>
+
+			</p>
+		</div>
+		 <nav class="navbar navbar-default navbar-fixed-bottom">
+  <div class="container">
+
+  </div>
+</nav>
+	</div>
+{% endblock %}

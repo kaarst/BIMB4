@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<!-- saved from url=(0082)https://us18.admin.mailchimp.com/campaigns/wizard/neapolitan?id=46491#t:files-list -->
+<html xmlns="http://www.w3.org/1999/html" class="n dj_webkit dj_chrome dj_contentbox"><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MCZTKL"></script><script type="text/javascript" charset="utf-8" id="zm-extension" src="chrome-extension://fdcgdnkidjaadafnichfpabhfomcebme/scripts/webrtc-patch.js" async=""></script><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <title>Campaign Builder - Template Designer | MailChimp</title>   <meta name="copyright" content="Copyright (c) 2018 MailChimp. All Rights Reserved."> <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, viewport-fit=cover"> <meta name="apple-mobile-web-app-capable" content="yes"> <meta name="apple-mobile-web-app-status-bar-style" content="black"> <meta content="//mailchimp.com/browserconfig.xml" name="msapplication-config"> <meta content="#52BAD5" name="msapplication-TileColor"> <meta content="//static.mailchimp.com/web/favicon.png" name="msapplication-TileImage"> <link href="./Campaign Builder - Template Designer _ MailChimp_files/css" rel="stylesheet" type="text/css"> <link rel="stylesheet" type="text/css" href="./Campaign Builder - Template Designer _ MailChimp_files/theone.css"> <link rel="stylesheet" type="text/css" href="./Campaign Builder - Template Designer _ MailChimp_files/pages.css"> <link href="https://us18.admin.mailchimp.com/images/apple-touch-icon-180x180.png" rel="apple-touch-icon" sizes="180x180"> <link href="https://us18.admin.mailchimp.com/images/touch-icon-192x192.png" rel="icon" sizes="192x192"> <link rel="shortcut icon" href="https://us18.admin.mailchimp.com/favicon.ico">  <script type="text/javascript" src="./Campaign Builder - Template Designer _ MailChimp_files/snap.svg-min.js.download"></script> <script type="text/javascript">
+var xhr_open = XMLHttpRequest.prototype.open;
+XMLHttpRequest.prototype.open = function(method, url, async, user, password) {
+    xhr_open.call(this, method, url, async, user, password);
+    if (async === true && url.match(/^\/(?!\/)+/)) {
+        this.setRequestHeader('X-CSRF-Token', '81953782938d58a71291b8112fa652cfb27dc14b');
+    }
+}
+</script>  <script src="./Campaign Builder - Template Designer _ MailChimp_files/dojo.js.download" data-dojo-config="parseOnLoad: true, usePlainJson: true, isDebug: false"></script> <script src="./Campaign Builder - Template Designer _ MailChimp_files/mccommon.js.download"></script> <script type="text/javascript">
+    // The following dojo require places mojo.utils on the window.
+    // Many html files and javascript views rely on this property existing.
+    // Search for "mojo.utils" in any *.html files, and you'll find the hundreds of cases.
+    // Leaving this for historical reasons, but eventually migrating those usages would be good.
+    dojo.require("mojo.utils");
+
+    require(["mojo/widgets/Dialog"]);
+
+    // Leaving it globally since we used it around
+    window.rootUrl = '/';
+
+    require([
+        "dojo/query",
+    ], function (query) {
+        // captcha takes a global function to callback
+        window.captchaSuccess = function () {
+            query('[data-mc-el="captchaAutoSubmit"]')[0].submit();
+        };
+    });
+
+    require([
+        "dojo/_base/lang",
+        "mojo/user",
+        "mojo/context",
+    ], function (lang, user, context) {
+        // Add defaults to the actual modules.
+
+        lang.mixin(context, {
+            'rootUrl': '/',
+
+            'proxyBaseUrl': "https:\/\/d2q0qd5iz04n9u.cloudfront.net\/_ssl\/proxy.php",
+
+            'listManageDomain': "facebook.us18.list-manage.com",
+
+            'pusherKey': "74d7188a67461f12439a",
+
+            'cdnImagesDomain': "cdn-images.mailchimp.com",
+
+            'galleryDomain': "gallery.mailchimp.com",
+
+            'avestaEnvironment': "prod",
+
+            "imageEditorUrl": "https:\/\/dme0ih8comzn4.cloudfront.net\/imaging\/v3\/editor.js",
+
+            "imageEditorKey": "0e6dcf36c54b4faf965e45884a3dcf30",
+
+            "solvvyUrl": "\/js\/vendor\/solvvy\/solvvy.js"        });
+
+                lang.mixin(user, {
+            '__csrfToken': "81953782938d58a71291b8112fa652cfb27dc14b",
+
+            'role': "owner",
+
+            'type': "Free Trial",
+
+            'userId': 96099833,
+
+            'email': "jip.kurstjens@outlook.com",
+
+            'settings': {
+                'pageSize': 25,
+                'fileManagerShowGrid': true            },
+
+                            'avatarUrl': "https:\/\/secure.gravatar.com\/avatar\/bbbce5937f5e8a502c4da6d5b53d09e0.jpg?s=300&d=https%3A%2F%2Fcdn-images.mailchimp.com%2Ficons%2Fletter-avatars%2Fj.png",
+            
+            'coachmarks': null || {},
+
+            'showCoachmarks': true,
+
+            'pro': false,
+
+            'pro_import_complete': false,
+
+            'flags': ["mobile.iphone.4.6.abandoned_cart","mobile.android.4.6.abandoned_cart","mobile.android.4.7.saved_templates","mobile.iphone.4.7.saved_templates","mobile.iphone.4.7.product_retargeting","mobile.android.4.7.product_retargeting","compliance_landing_page_policies","compliance_postcard_to_crowd","compliance_can_review_new_users","compliance_mcuribl_alternate_unroller","compliance_shutdown_egp_match","compliance_content_change_review","adyen_turnoff","system_emails_over_mctx","multichannel.personalized_to_refinements","multichannel.campaign_checklist_editor_social_posting","multichannel.create_button_top_navigation","multichannel.direct_mail_promo_codes","gdpr.native_form_features","gdpr.form_version","gdpr.form_version_update","gdpr.subscriber_export","gdpr_forget_subscriber","automation.freemium","ignore_egp_spam_trap","support_access_validator","rss_parent_issues","billing_use_tr_tax_details","bcrypt","api30_onerror_bugsnag_fix","api30_router_update","mandrill_signup_permitted","security_authy_for_sms_tfa","security_authy_for_login","security_authy_for_everybody","subscribe_post_throttler_logging","metadefender_file_scan","mcadmin_delete_store_button","landing_pages.dismissible_banner","purchase_activity_logging","purchase_activity_delete","unsub_activity_logging","bounce_activity_logging","abuse_activity_logging","ads_controller_refactor","pylp_blueprint","product_retargeting_notification","google_tag_manager","sites_mcjs_persist_public_s3","landing_pages.recaptcha_for_branded_domains","stats_social.create_temp_innodb","api.page_publish_refactor","connected_site_survey_email","optimize_precs_sending","facebook_cbm_new_accounts","retry_login_cacheclient","user_moves_parallel_dump","sites.enforce_mcjs_tos","sites.feature_promotion","campaigns_keep_rss_info_on_soft_delete","sites.tos_acceptance_modal","sites.tos_feature_pauses"] || {},
+
+            'userLevel': "free",
+
+            'isAnyEcomm': false,
+
+            'hasPaid': false,
+
+            'currencySymbol': "$",
+
+            'timezoneLabel': "Eastern Time",
+
+            'timezoneOffset': -4,
+
+            'hasVerifiedCustomDomain': true,
+
+            'isActivelyPaying': false,
+
+            'mustTrackLinks': true,
+
+            'isGoalAvailable': false,
+
+            'isGoalEnabled': false,
+
+            'canSend': true,
+
+            'freeLimit': 2000,
+
+            'whyNotSend': "There are some issues which might impact your ability to send.  <a class=\"nowrap\" href=\"https:\/\/us18.admin.mailchimp.com\/account#issues\">Learn more about your account status<\/a>.",
+
+            'isPaused': false,
+
+            'sentToday': 0,
+
+            'isLimitedTrial': true,
+
+            'canSendFree': true,
+
+            'isPayAsYouGo': false,
+
+            'brandLogoUrl': "https:\/\/cdn-images.mailchimp.com\/template_images\/gallery\/logo@2x.png",
+
+            'isBootstrapped': true,
+        });
+        
+    });
+        require([
+        "vendor/bugsnag/bugsnag",
+        "mojo/user",
+    ], function (bugsnag, user) {
+        bugsnag.endpoint = "https:\/\/bugsnag-notify.rsglab.com\/js";
+        bugsnag.apiKey = "29f7c1fcbc19f93274b6fae7d4ab0aa1";
+        bugsnag.autoNotify = true;
+        bugsnag.user = {
+            id: user.userId,
+            type: user.type,
+        };
+    });
+
+    require([
+        "dojo/Deferred",
+        "vendor/bugsnag/bugsnag",
+    ], function (Deferred, bugsnag) {
+        Deferred.instrumentRejected = function (error, handled, rejection, deferred) {
+            if (handled === true) {
+                return;
+            }
+
+            if (typeof error === "string") {
+                bugsnag.notify(error);
+            } else if (error instanceof Error) {
+                bugsnag.notifyException(error);
+            } else {
+                bugsnag.notify("UnhandledDeferredRejection", error);
+            }
+        };
+    });
+    </script> <script type="text/javascript">
+    require([
+        "mojo/widgets/Notifications",
+        "mojo/keep-alive"
+    ]);
+</script>   <script type="text/javascript" src="./Campaign Builder - Template Designer _ MailChimp_files/swfobject.js.download"></script> <script type="text/javascript">
+            require([
+                "dojo/parser",
+                "dojo/behavior",
+                "dojo/fx",
+                "dojo/query",
+                "dojo/on",
+                "dojo/dom-class",
+                "mojo/app/wizard",
+
+                //Dijit Stuff
+                "dijit/form/Select",
+                "dijit/form/CheckBox",
+                "dijit/form/Button",
+                "dijit/Dialog",
+                "dijit/Tooltip",
+                "dijit/ProgressBar",
+
+                //DojoX
+                "dojox/fx",
+                "dojox/widget/Toaster",
+
+                //Custom libs
+                "mojo/widgets/HelpDialog",
+                "mojo/touch/no-delay",
+                "mojo/app/common/sticky-hoverlist",
+                "dojo/domReady!"
+            ], function(parser, behavior, fx, query, on, domClass, wizard){
+                wizard.instantiateMobilePreviewMenu();
+            });
+
+            var ping_interval_id = null;
+        </script> <script type="text/javascript">
+    var reauth = {
+        url: '/login/reauthenticate?username=Jip_Kurstjens&user_id=96099833',
+        rememberMe : false    };
+
+    dojo.require('mojo.ReauthDialog');
+
+    // Override dojo's xhr to handle 403 status
+    (function(){
+        var oldXHR = dojo.xhr;
+        dojo.xhr = function() {
+            return oldXHR.apply(dojo, arguments).addErrback(function(err) {
+                switch(err.xhr.status) {
+                    case 403:
+                        window.top.mojo.ReauthDialog.show();
+                        break;
+                }
+            });
+        };
+    })();
+</script> <script type="text/javascript">
+    // Handle 403 errors when making ajax calls through dojo/request which is the newer module.
+    require([
+        "dojo/request",
+        "dojo/request/notify"
+    ], function(request, notify) {
+        notify("error", function( error ) {
+            switch(error.response.status) {
+                case 403:
+                    window.top.mojo.ReauthDialog.show();
+                    break;
+            }
+        });
+    });
+</script>  
+     <script>
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-MCZTKL');
+        // setup the GA command queue
+        window['GoogleAnalyticsObject'] = '_ga';
+        window._ga = window._ga || function() {
+            window._ga.q = window._ga.q || [];
+            window._ga.q.push(arguments);
+        };
+    </script>
+
+     <script>
+    window.ga = function /*decoratedGoogleAnalytics*/() {
+        var args = [].slice.call(arguments, 0);
+        if (typeof args[0] === 'string'
+                && args[0] !== 'create'
+                && args[0] !== 'provide') {
+            args[0] = 't0.' + args[0];
+        }
+        return _ga.apply(this, args);
+    };
+
+    (function /*initializeGoogleAnalytics*/() {
+
+        var avesta = {
+            hasUser: true,
+            userId: 96099833,
+            loginId: "0161016c29a3541564dad4c85db30670",
+            UA: "UA-329148-81",
+            version: "1",
+            pageviewData: []        };
+
+        var dimensions = {
+            USER_ID: 'dimension8',
+            LOGIN_ID: 'dimension24',
+            TRACKING_VERSION: 'dimension9'
+        };
+
+        if (avesta.hasUser) {
+            ga("create", avesta.UA, "auto", {
+                allowLinker: false,
+                userId: avesta.userId,
+                name: 't0'
+            });
+
+            ga("set", dimensions.USER_ID, avesta.userId.toString());
+            ga("set", dimensions.LOGIN_ID, avesta.loginId.toString());
+        } else {
+            ga("create", avesta.UA, "auto", {
+                allowLinker: false,
+                name: 't0'
+            });
+        }
+        ga("set", dimensions.TRACKING_VERSION, avesta.version);
+
+        ga("require","linker");
+        ga("linker:autoLink", [/(.*\.)?mailchimp(app)?\.com$/], !1,!0);
+
+        ga("send","pageview", avesta.pageviewData);
+
+    })();
+
+    // Save tracking id and client id to a cookie so we can use them server side
+    require(["mojo/utils"], function(utils) {
+        if (!utils.getCookie('_mcga')) {
+            ga(function(tracker) {
+                var gaData = {};
+                gaData.tid = tracker.get('trackingId');
+                gaData.cid = tracker.get('clientId');
+                document.cookie = '_mcga='+ JSON.stringify(gaData) +';path=/;domain=.mailchimp.com';
+            });
+        }
+    });
+</script>   
+
+    <link href="./Campaign Builder - Template Designer _ MailChimp_files/css(1)" rel="stylesheet">
+     <link rel="stylesheet" href="./Campaign Builder - Template Designer _ MailChimp_files/mc-codemirror.css"> <link rel="stylesheet" href="./Campaign Builder - Template Designer _ MailChimp_files/mc-codemirror-themes.css">  <script type="text/javascript">
+        dojo.subscribe("mojo/reauth/complete", function(t) {
+            var path = neapolitan_content_block_root +"?id=" + tpl_id;
+            if (variant) {
+                path += "&variant=" + variant;
+            }
+
+            document.location.href = path;
+        });
+
+        dojo.require('mojo.app.wizard');
+        mojo.app.wizard.currentCampaignId = 46491;
+        mojo.app.wizard.currentCampaignType = "regular";
+
+		// Set page category for tracking in Google Analytics
+		window.ga('set', 'contentGroup2', "regular");
+
+        var __csrf = "81953782938d58a71291b8112fa652cfb27dc14b";
+        var campaignData = {
+            'social': {"website_url":"http:\/\/facebook.com","fb_profile_url":null,"twitter_profile_url":null,"from_email":null}        };
+
+        function resetScheduleDate() {
+                        dijit.byId('reactivate-dialog').show();
+                    }
+
+        var defaultBlocks = null;
+        var refreshBlocks = false;
+        var layoutChanged = false;
+
+        function saveTemplate(formvals) {
+            var name_input = dojo.byId('template-name');
+            var tpl_name = name_input.value;
+            //Validate that a name was provided
+            if(!tpl_name) {
+                if(!dojo.byId('template-name-error')) {
+                    var validation = document.createElement('span');
+                    validation.id = 'template-name-error';
+                    dojo.addClass(validation, 'invalid-error');
+                    validation.appendChild(document.createTextNode('A template name must be provided'));
+                    name_input.parentNode.insertBefore(validation, name_input.nextSibling);
+                }
+                return;
+            } else if(dojo.byId('template-name-error')) {
+                dojo.byId('template-name-error').parentNode.removeChild(dojo.byId('template-name-error'));
+            }
+            dijit.byId('save-template-modal').hide();
+            var type = dojo.byId('save-type').value;
+            dojo.xhrPost({
+                'url': '/campaigns/wizard/neapolitan/save-template?id=46491&variant=',
+                'content': {'name': tpl_name, 'type': type},
+                'load': function() {
+                    dijit.byId('save-template-complete').show();
+                }
+            });
+        }
+
+        campaign_from_domain = "";
+</script> <script type="text/javascript">
+    var tpl_type = "campaign";
+    var tpl_id = 46491;
+    var campaign_type = "regular";
+            var base_tpl_id = 2000114;
+        var variant = null;
+
+    var save_style_url = '/campaigns/wizard/neapolitan/save-style';
+    var switch_theme_url = '/campaigns/wizard/neapolitan/switch-theme';
+    var fckeditor_css_url = '/campaigns/wizard/neapolitan/fckeditor-css';
+    var fckeditor_style_url = '/campaigns/wizard/neapolitan/fckeditor-style';
+    var fckeditor_merge_url = '/campaigns/wizard/neapolitan/fckeditor-merges';
+    var edit_image_url = '/campaigns/wizard/neapolitan/edit-image';
+    var edit_image_bysrc_url = '/campaigns/wizard/neapolitan/edit-image-by-src';
+    var save_image_url = '/campaigns/wizard/neapolitan/save-image';
+    var update_banner_campaign_url = update_banner_list_url = '/campaigns/wizard/neapolitan/monkeyrewards-post?id=46491';
+    var live_style_url = '/campaigns/wizard/neapolitan/live-styles?id=46491';
+    var undo_style_url = '/campaigns/wizard/neapolitan/undo-styles?id=46491';
+    var revert_style_url = '/campaigns/wizard/neapolitan/revert-styles?id=46491';
+    var set_content_from_block_url = '/campaigns/wizard/neapolitan/set-content-from-preserved?id=46491';
+    var save_image_from_url = '/campaigns/wizard/neapolitan/save-image-from-url?id=46491';
+    var mc_root = '/';
+    var neapolitan_content_block_root= '/campaigns/wizard/neapolitan';
+    var neapolitan_save_tour_url = '/campaigns/wizard/neapolitan/tour-completed?id=46491';
+
+</script> <script type="text/javascript" src="./Campaign Builder - Template Designer _ MailChimp_files/mcneapolitan.js.download"></script> <script type="text/javascript">dojo.require('mojo.neapolitan.tpldesign');</script> <script type="text/javascript" src="./Campaign Builder - Template Designer _ MailChimp_files/link_dialog.js.download"></script> <script src="./Campaign Builder - Template Designer _ MailChimp_files/ZeroClipboard.min.js.download"></script>  <script type="text/javascript">
+        require([
+            "mojo/neapolitan/TourCoachmarks",
+            "mojo/neapolitan/Neapolitan",
+            "mojo/neapolitan/widgets/ViewerList",
+            "mojo/app/wizard",
+
+            "mojo/lib/flags",
+            "mojo/user",
+
+            "dojo/aspect",
+            "dojo/ready",
+            "dojo/query",
+            "dojo/dom",
+            "dojo/dom-attr",
+            "dojo/dom-class",
+            "dojo/on",
+            "dojo/_base/connect",
+            "dojo/_base/event",
+            "dojo/request/xhr",
+            "dojo/_base/window",
+    
+            "dijit/registry",
+            "dojo/touch",
+            "mojo/widgets/KbSearch",
+            "dojo/NodeList-manipulate"
+        ], function(
+            coachmark, Neapolitan, ViewerList, wizard, 
+            user, flags,
+            aspect, ready, query, dom, domAttr,
+            domClass, on, connect, event, xhr, win, 
+            dRegistry, touch, KbSearch
+        ) {
+
+            // Show or hide the live merge info based on user role and whether there is into to preview
+            mojo.app.wizard.showMergeInfo = true;
+
+            // Pass a flag to tweak preview UI if campaign splits on subject
+            mojo.app.wizard.splitsOnSubject = false;
+            
+            window.app = new Neapolitan({
+                'channelPath': "presence-ea30cd5a34b1f1a19c15f74cae4876cc5da3026d-campaign_edit_46491",
+                'campaignId': 46491,
+                'campaignTitle': "Feest 7 Juli",
+                'campaignType': "regular",
+                'showMerge': mojo.app.wizard.showMergeInfo,
+                'splitsOnSubject': mojo.app.wizard.splitsOnSubject,
+                'rootUrl': "/campaigns/wizard/neapolitan",
+                "ecommStores": [],
+                "allEcommStores": [],
+                "campaignListId": 0,
+                "defaultStoreId": null,
+                "variant": null,
+                "editableStyles": {"Page":[{"name":"Heading 1","selectors":"h1","tip":null,"props":{"color":{"selector":"h1","value":"#FFFFFF"},"font-family":{"selector":"h1","value":"'Noticia Text', Georgia, 'Times New Roman', serif"},"font-size":{"selector":"h1","value":"48px"},"font-style":{"selector":"h1","value":"normal"},"font-weight":{"selector":"h1","value":"bold"},"line-height":{"selector":"h1","value":"150%"},"letter-spacing":{"selector":"h1","value":"normal"},"text-align":{"selector":"h1","value":"center"}}},{"name":"Heading 2","selectors":"h2","tip":null,"props":{"color":{"selector":"h2","value":"#1F2F38"},"font-family":{"selector":"h2","value":"'Noticia Text', Georgia, 'Times New Roman', serif"},"font-size":{"selector":"h2","value":"48px"},"font-style":{"selector":"h2","value":"normal"},"font-weight":{"selector":"h2","value":"bold"},"line-height":{"selector":"h2","value":"150%"},"letter-spacing":{"selector":"h2","value":"normal"},"text-align":{"selector":"h2","value":"center"}}},{"name":"Heading 3","selectors":"h3","tip":null,"props":{"color":{"selector":"h3","value":"#1F2F38"},"font-family":{"selector":"h3","value":"'Noticia Text', Georgia, 'Times New Roman', serif"},"font-size":{"selector":"h3","value":"36px"},"font-style":{"selector":"h3","value":"normal"},"font-weight":{"selector":"h3","value":"bold"},"line-height":{"selector":"h3","value":"150%"},"letter-spacing":{"selector":"h3","value":"normal"},"text-align":{"selector":"h3","value":"center"}}},{"name":"Heading 4","selectors":"h4","tip":null,"props":{"color":{"selector":"h4","value":"#435864"},"font-family":{"selector":"h4","value":"'Noticia Text', Georgia, 'Times New Roman', serif"},"font-size":{"selector":"h4","value":"22px"},"font-style":{"selector":"h4","value":"italic"},"font-weight":{"selector":"h4","value":"normal"},"line-height":{"selector":"h4","value":"125%"},"letter-spacing":{"selector":"h4","value":"normal"},"text-align":{"selector":"h4","value":"left"}}}],"Header":[{"name":"Header Container Style","selectors":"#templateHeader","tip":null,"props":{"background-color":{"selector":"#templateHeader","value":"#324d5c"},"background-image":{"selector":"#templateHeader","value":"url(\"https:\/\/gallery.mailchimp.com\/0b592b987dd8b24836fc697f3\/images\/f01fcb30-9ba1-4720-9ece-43ebbaa81ab0.jpg\")"},"background-repeat":{"selector":"#templateHeader","value":"no-repeat"},"background-position":{"selector":"#templateHeader","value":"center"},"background-size":{"selector":"#templateHeader","value":"cover"},"border-top":{"selector":"#templateHeader","value":"0"},"border-bottom":{"selector":"#templateHeader","value":"0"},"padding-top":{"selector":"#templateHeader","value":"44px"},"padding-bottom":{"selector":"#templateHeader","value":"44px"}}},{"name":"Header Interior Style","selectors":".headerContainer","tip":null,"props":{"background-color":{"selector":".headerContainer","value":"transparent"},"background-image":{"selector":".headerContainer","value":"none"},"background-repeat":{"selector":".headerContainer","value":"no-repeat"},"background-position":{"selector":".headerContainer","value":"center"},"background-size":{"selector":".headerContainer","value":"cover"},"border-top":{"selector":".headerContainer","value":"0"},"border-bottom":{"selector":".headerContainer","value":"0"},"padding-top":{"selector":".headerContainer","value":"0"},"padding-bottom":{"selector":".headerContainer","value":"0"}}},{"name":"Header Text","selectors":".headerContainer .mcnTextContent, .headerContainer .mcnTextContent p","tip":null,"props":{"color":{"selector":".headerContainer .mcnTextContent, .headerContainer .mcnTextContent p","value":"#FFFFFF"},"font-family":{"selector":".headerContainer .mcnTextContent, .headerContainer .mcnTextContent p","value":"'Noticia Text', Georgia, 'Times New Roman', serif"},"font-size":{"selector":".headerContainer .mcnTextContent, .headerContainer .mcnTextContent p","value":"18px"},"line-height":{"selector":".headerContainer .mcnTextContent, .headerContainer .mcnTextContent p","value":"150%"},"text-align":{"selector":".headerContainer .mcnTextContent, .headerContainer .mcnTextContent p","value":"left"}}},{"name":"Header Link","selectors":".headerContainer .mcnTextContent a, .headerContainer .mcnTextContent p a","tip":null,"props":{"color":{"selector":".headerContainer .mcnTextContent a, .headerContainer .mcnTextContent p a","value":"#FFFFFF"},"font-weight":{"selector":".headerContainer .mcnTextContent a, .headerContainer .mcnTextContent p a","value":"normal"},"text-decoration":{"selector":".headerContainer .mcnTextContent a, .headerContainer .mcnTextContent p a","value":"underline"}}}],"Body":[{"name":"Body Container Style","selectors":"#templateBody","tip":null,"props":{"background-color":{"selector":"#templateBody","value":"#ffffff"},"background-image":{"selector":"#templateBody","value":"none"},"background-repeat":{"selector":"#templateBody","value":"no-repeat"},"background-position":{"selector":"#templateBody","value":"center"},"background-size":{"selector":"#templateBody","value":"cover"},"border-top":{"selector":"#templateBody","value":"0"},"border-bottom":{"selector":"#templateBody","value":"0"},"padding-top":{"selector":"#templateBody","value":"72px"},"padding-bottom":{"selector":"#templateBody","value":"9px"}}},{"name":"Body Interior Style","selectors":".bodyContainer","tip":null,"props":{"background-color":{"selector":".bodyContainer","value":"transparent"},"background-image":{"selector":".bodyContainer","value":"none"},"background-repeat":{"selector":".bodyContainer","value":"no-repeat"},"background-position":{"selector":".bodyContainer","value":"center"},"background-size":{"selector":".bodyContainer","value":"cover"},"border-top":{"selector":".bodyContainer","value":"0"},"border-bottom":{"selector":".bodyContainer","value":"0"},"padding-top":{"selector":".bodyContainer","value":"0"},"padding-bottom":{"selector":".bodyContainer","value":"0"}}},{"name":"Body Text","selectors":".bodyContainer .mcnTextContent, .bodyContainer .mcnTextContent p","tip":null,"props":{"color":{"selector":".bodyContainer .mcnTextContent, .bodyContainer .mcnTextContent p","value":"#202020"},"font-family":{"selector":".bodyContainer .mcnTextContent, .bodyContainer .mcnTextContent p","value":"'Noticia Text', Georgia, 'Times New Roman', serif"},"font-size":{"selector":".bodyContainer .mcnTextContent, .bodyContainer .mcnTextContent p","value":"18px"},"line-height":{"selector":".bodyContainer .mcnTextContent, .bodyContainer .mcnTextContent p","value":"150%"},"text-align":{"selector":".bodyContainer .mcnTextContent, .bodyContainer .mcnTextContent p","value":"left"}}},{"name":"Body Link","selectors":".bodyContainer .mcnTextContent a, .bodyContainer .mcnTextContent p a","tip":null,"props":{"color":{"selector":".bodyContainer .mcnTextContent a, .bodyContainer .mcnTextContent p a","value":"#DE5B49"},"font-weight":{"selector":".bodyContainer .mcnTextContent a, .bodyContainer .mcnTextContent p a","value":"normal"},"text-decoration":{"selector":".bodyContainer .mcnTextContent a, .bodyContainer .mcnTextContent p a","value":"underline"}}}],"Upper Columns":[{"name":"Upper Columns Container Style","selectors":"#templateUpperColumns","tip":null,"props":{"background-color":{"selector":"#templateUpperColumns","value":"#ffffff"},"background-image":{"selector":"#templateUpperColumns","value":"none"},"background-repeat":{"selector":"#templateUpperColumns","value":"no-repeat"},"background-position":{"selector":"#templateUpperColumns","value":"center"},"background-size":{"selector":"#templateUpperColumns","value":"cover"},"border-top":{"selector":"#templateUpperColumns","value":"0"},"border-bottom":{"selector":"#templateUpperColumns","value":"0"},"padding-top":{"selector":"#templateUpperColumns","value":"9px"},"padding-bottom":{"selector":"#templateUpperColumns","value":"90px"}}},{"name":"Upper Columns Interior Style","selectors":"#templateUpperColumns .columnContainer","tip":null,"props":{"background-color":{"selector":"#templateUpperColumns .columnContainer","value":"transparent"},"background-image":{"selector":"#templateUpperColumns .columnContainer","value":"none"},"background-repeat":{"selector":"#templateUpperColumns .columnContainer","value":"no-repeat"},"background-position":{"selector":"#templateUpperColumns .columnContainer","value":"center"},"background-size":{"selector":"#templateUpperColumns .columnContainer","value":"cover"},"border-top":{"selector":"#templateUpperColumns .columnContainer","value":"0"},"border-bottom":{"selector":"#templateUpperColumns .columnContainer","value":"0"},"padding-top":{"selector":"#templateUpperColumns .columnContainer","value":"0"},"padding-bottom":{"selector":"#templateUpperColumns .columnContainer","value":"0"}}},{"name":"Upper Columns Text","selectors":"#templateUpperColumns .columnContainer .mcnTextContent, #templateUpperColumns .columnContainer .mcnTextContent p","tip":null,"props":{"color":{"selector":"#templateUpperColumns .columnContainer .mcnTextContent, #templateUpperColumns .columnContainer .mcnTextContent p","value":"#202020"},"font-family":{"selector":"#templateUpperColumns .columnContainer .mcnTextContent, #templateUpperColumns .columnContainer .mcnTextContent p","value":"'Noticia Text', Georgia, 'Times New Roman', serif"},"font-size":{"selector":"#templateUpperColumns .columnContainer .mcnTextContent, #templateUpperColumns .columnContainer .mcnTextContent p","value":"16px"},"line-height":{"selector":"#templateUpperColumns .columnContainer .mcnTextContent, #templateUpperColumns .columnContainer .mcnTextContent p","value":"150%"},"text-align":{"selector":"#templateUpperColumns .columnContainer .mcnTextContent, #templateUpperColumns .columnContainer .mcnTextContent p","value":"left"}}},{"name":"Upper Columns Link","selectors":"#templateUpperColumns .columnContainer .mcnTextContent a, #templateUpperColumns .columnContainer .mcnTextContent p a","tip":null,"props":{"color":{"selector":"#templateUpperColumns .columnContainer .mcnTextContent a, #templateUpperColumns .columnContainer .mcnTextContent p a","value":"#DE5B49"},"font-weight":{"selector":"#templateUpperColumns .columnContainer .mcnTextContent a, #templateUpperColumns .columnContainer .mcnTextContent p a","value":"normal"},"text-decoration":{"selector":"#templateUpperColumns .columnContainer .mcnTextContent a, #templateUpperColumns .columnContainer .mcnTextContent p a","value":"underline"}}}],"Lower Columns":[{"name":"Lower Columns Container Style","selectors":"#templateLowerColumns","tip":null,"props":{"background-color":{"selector":"#templateLowerColumns","value":"#cddce4"},"background-image":{"selector":"#templateLowerColumns","value":"none"},"background-repeat":{"selector":"#templateLowerColumns","value":"no-repeat"},"background-position":{"selector":"#templateLowerColumns","value":"50% 50%"},"background-size":{"selector":"#templateLowerColumns","value":"cover"},"border-top":{"selector":"#templateLowerColumns","value":"0"},"border-bottom":{"selector":"#templateLowerColumns","value":"0"},"padding-top":{"selector":"#templateLowerColumns","value":"0px"},"padding-bottom":{"selector":"#templateLowerColumns","value":"0px"}}},{"name":"Lower Columns Interior Style","selectors":"#templateLowerColumns .columnContainer","tip":null,"props":{"background-color":{"selector":"#templateLowerColumns .columnContainer","value":"transparent"},"background-image":{"selector":"#templateLowerColumns .columnContainer","value":"none"},"background-repeat":{"selector":"#templateLowerColumns .columnContainer","value":"no-repeat"},"background-position":{"selector":"#templateLowerColumns .columnContainer","value":"center"},"background-size":{"selector":"#templateLowerColumns .columnContainer","value":"cover"},"border-top":{"selector":"#templateLowerColumns .columnContainer","value":"0"},"border-bottom":{"selector":"#templateLowerColumns .columnContainer","value":"0"},"padding-top":{"selector":"#templateLowerColumns .columnContainer","value":"0"},"padding-bottom":{"selector":"#templateLowerColumns .columnContainer","value":"0"}}},{"name":"Lower Column Section Header Text","selectors":".lowerColumnHeaderContainer .mcnTextContent, .lowerColumnHeaderContainer .mcnTextContent p","tip":null,"props":{"color":{"selector":".lowerColumnHeaderContainer .mcnTextContent, .lowerColumnHeaderContainer .mcnTextContent p","value":"#202020"},"font-family":{"selector":".lowerColumnHeaderContainer .mcnTextContent, .lowerColumnHeaderContainer .mcnTextContent p","value":"'Noticia Text', Georgia, 'Times New Roman', serif"},"font-size":{"selector":".lowerColumnHeaderContainer .mcnTextContent, .lowerColumnHeaderContainer .mcnTextContent p","value":"18px"},"line-height":{"selector":".lowerColumnHeaderContainer .mcnTextContent, .lowerColumnHeaderContainer .mcnTextContent p","value":"100%"},"text-align":{"selector":".lowerColumnHeaderContainer .mcnTextContent, .lowerColumnHeaderContainer .mcnTextContent p","value":"left"}}},{"name":"Lower Column Section Header Link","selectors":".lowerColumnHeaderContainer .mcnTextContent a, .lowerColumnHeaderContainer .mcnTextContent p a","tip":null,"props":{"color":{"selector":".lowerColumnHeaderContainer .mcnTextContent a, .lowerColumnHeaderContainer .mcnTextContent p a","value":"#DE5B49"},"font-weight":{"selector":".lowerColumnHeaderContainer .mcnTextContent a, .lowerColumnHeaderContainer .mcnTextContent p a","value":"normal"},"text-decoration":{"selector":".lowerColumnHeaderContainer .mcnTextContent a, .lowerColumnHeaderContainer .mcnTextContent p a","value":"underline"}}},{"name":"Lower Columns Text","selectors":"#templateLowerColumns .columnContainer .mcnTextContent, #templateLowerColumns .columnContainer .mcnTextContent p","tip":null,"props":{"color":{"selector":"#templateLowerColumns .columnContainer .mcnTextContent, #templateLowerColumns .columnContainer .mcnTextContent p","value":"#202020"},"font-family":{"selector":"#templateLowerColumns .columnContainer .mcnTextContent, #templateLowerColumns .columnContainer .mcnTextContent p","value":"'Noticia Text', Georgia, 'Times New Roman', serif"},"font-size":{"selector":"#templateLowerColumns .columnContainer .mcnTextContent, #templateLowerColumns .columnContainer .mcnTextContent p","value":"18px"},"line-height":{"selector":"#templateLowerColumns .columnContainer .mcnTextContent, #templateLowerColumns .columnContainer .mcnTextContent p","value":"150%"},"text-align":{"selector":"#templateLowerColumns .columnContainer .mcnTextContent, #templateLowerColumns .columnContainer .mcnTextContent p","value":"left"}}},{"name":"Lower Columns Link","selectors":"#templateLowerColumns .columnContainer .mcnTextContent a, #templateLowerColumns .columnContainer .mcnTextContent p a","tip":null,"props":{"color":{"selector":"#templateLowerColumns .columnContainer .mcnTextContent a, #templateLowerColumns .columnContainer .mcnTextContent p a","value":"#DE5B49"},"font-weight":{"selector":"#templateLowerColumns .columnContainer .mcnTextContent a, #templateLowerColumns .columnContainer .mcnTextContent p a","value":"normal"},"text-decoration":{"selector":"#templateLowerColumns .columnContainer .mcnTextContent a, #templateLowerColumns .columnContainer .mcnTextContent p a","value":"underline"}}}],"Footer":[{"name":"Footer Style","selectors":"#templateFooter","tip":null,"props":{"background-color":{"selector":"#templateFooter","value":"#324d5c"},"background-image":{"selector":"#templateFooter","value":"none"},"background-repeat":{"selector":"#templateFooter","value":"no-repeat"},"background-position":{"selector":"#templateFooter","value":"center"},"background-size":{"selector":"#templateFooter","value":"cover"},"border-top":{"selector":"#templateFooter","value":"0"},"border-bottom":{"selector":"#templateFooter","value":"0"},"padding-top":{"selector":"#templateFooter","value":"0px"},"padding-bottom":{"selector":"#templateFooter","value":"0px"}}},{"name":"Footer Interior Style","selectors":".footerContainer","tip":null,"props":{"background-color":{"selector":".footerContainer","value":"transparent"},"background-image":{"selector":".footerContainer","value":"none"},"background-repeat":{"selector":".footerContainer","value":"no-repeat"},"background-position":{"selector":".footerContainer","value":"center"},"background-size":{"selector":".footerContainer","value":"cover"},"border-top":{"selector":".footerContainer","value":"0"},"border-bottom":{"selector":".footerContainer","value":"0"},"padding-top":{"selector":".footerContainer","value":"0"},"padding-bottom":{"selector":".footerContainer","value":"0"}}},{"name":"Footer Text","selectors":".footerContainer .mcnTextContent, .footerContainer .mcnTextContent p","tip":null,"props":{"color":{"selector":".footerContainer .mcnTextContent, .footerContainer .mcnTextContent p","value":"#FFFFFF"},"font-family":{"selector":".footerContainer .mcnTextContent, .footerContainer .mcnTextContent p","value":"Helvetica"},"font-size":{"selector":".footerContainer .mcnTextContent, .footerContainer .mcnTextContent p","value":"12px"},"line-height":{"selector":".footerContainer .mcnTextContent, .footerContainer .mcnTextContent p","value":"150%"},"text-align":{"selector":".footerContainer .mcnTextContent, .footerContainer .mcnTextContent p","value":"center"}}},{"name":"Footer Link","selectors":".footerContainer .mcnTextContent a, .footerContainer .mcnTextContent p a","tip":null,"props":{"color":{"selector":".footerContainer .mcnTextContent a, .footerContainer .mcnTextContent p a","value":"#FFFFFF"},"font-weight":{"selector":".footerContainer .mcnTextContent a, .footerContainer .mcnTextContent p a","value":"normal"},"text-decoration":{"selector":".footerContainer .mcnTextContent a, .footerContainer .mcnTextContent p a","value":"underline"}}}],"Mobile Styles":[{"name":"Heading 1","selectors":"@media only screen and (max-width: 480px){h1}","tip":null,"props":{"font-size":{"selector":"@media only screen and (max-width: 480px){h1}","value":"36px !important"},"line-height":{"selector":"@media only screen and (max-width: 480px){h1}","value":"125% !important"}}},{"name":"Heading 2","selectors":"@media only screen and (max-width: 480px){h2}","tip":null,"props":{"font-size":{"selector":"@media only screen and (max-width: 480px){h2}","value":"30px !important"},"line-height":{"selector":"@media only screen and (max-width: 480px){h2}","value":"125% !important"}}},{"name":"Heading 3","selectors":"@media only screen and (max-width: 480px){h3}","tip":null,"props":{"font-size":{"selector":"@media only screen and (max-width: 480px){h3}","value":"26px !important"},"line-height":{"selector":"@media only screen and (max-width: 480px){h3}","value":"150% !important"}}},{"name":"Heading 4","selectors":"@media only screen and (max-width: 480px){h4}","tip":null,"props":{"font-size":{"selector":"@media only screen and (max-width: 480px){h4}","value":"22px !important"},"line-height":{"selector":"@media only screen and (max-width: 480px){h4}","value":"150% !important"}}},{"name":"Boxed Text","selectors":"@media only screen and (max-width: 480px){.mcnBoxedTextContentContainer .mcnTextContent, .mcnBoxedTextContentContainer .mcnTextContent p}","tip":null,"props":{"font-size":{"selector":"@media only screen and (max-width: 480px){.mcnBoxedTextContentContainer .mcnTextContent, .mcnBoxedTextContentContainer .mcnTextContent p}","value":"14px !important"},"line-height":{"selector":"@media only screen and (max-width: 480px){.mcnBoxedTextContentContainer .mcnTextContent, .mcnBoxedTextContentContainer .mcnTextContent p}","value":"150% !important"}}},{"name":"Header Text","selectors":"@media only screen and (max-width: 480px){.headerContainer .mcnTextContent, .headerContainer .mcnTextContent p}","tip":null,"props":{"font-size":{"selector":"@media only screen and (max-width: 480px){.headerContainer .mcnTextContent, .headerContainer .mcnTextContent p}","value":"16px !important"},"line-height":{"selector":"@media only screen and (max-width: 480px){.headerContainer .mcnTextContent, .headerContainer .mcnTextContent p}","value":"150% !important"}}},{"name":"Body Text","selectors":"@media only screen and (max-width: 480px){.bodyContainer .mcnTextContent, .bodyContainer .mcnTextContent p}","tip":null,"props":{"font-size":{"selector":"@media only screen and (max-width: 480px){.bodyContainer .mcnTextContent, .bodyContainer .mcnTextContent p}","value":"16px !important"},"line-height":{"selector":"@media only screen and (max-width: 480px){.bodyContainer .mcnTextContent, .bodyContainer .mcnTextContent p}","value":"150% !important"}}},{"name":"Upper Column Text","selectors":"@media only screen and (max-width: 480px){#templateUpperColumns .columnContainer .mcnTextContent, #templateUpperColumns .columnContainer .mcnTextContent p}","tip":null,"props":{"font-size":{"selector":"@media only screen and (max-width: 480px){#templateUpperColumns .columnContainer .mcnTextContent, #templateUpperColumns .columnContainer .mcnTextContent p}","value":"16px !important"},"line-height":{"selector":"@media only screen and (max-width: 480px){#templateUpperColumns .columnContainer .mcnTextContent, #templateUpperColumns .columnContainer .mcnTextContent p}","value":"150% !important"}}},{"name":"Lower Column Section Header Text","selectors":"@media only screen and (max-width: 480px){.lowerColumnHeaderContainer .mcnTextContent, .lowerColumnHeaderContainer .mcnTextContent p}","tip":null,"props":{"font-size":{"selector":"@media only screen and (max-width: 480px){.lowerColumnHeaderContainer .mcnTextContent, .lowerColumnHeaderContainer .mcnTextContent p}","value":"16px !important"},"line-height":{"selector":"@media only screen and (max-width: 480px){.lowerColumnHeaderContainer .mcnTextContent, .lowerColumnHeaderContainer .mcnTextContent p}","value":"150% !important"}}},{"name":"Lower Column Text","selectors":"@media only screen and (max-width: 480px){#templateLowerColumns .columnContainer .mcnTextContent, #templateLowerColumns .columnContainer .mcnTextContent p}","tip":null,"props":{"font-size":{"selector":"@media only screen and (max-width: 480px){#templateLowerColumns .columnContainer .mcnTextContent, #templateLowerColumns .columnContainer .mcnTextContent p}","value":"16px !important"},"line-height":{"selector":"@media only screen and (max-width: 480px){#templateLowerColumns .columnContainer .mcnTextContent, #templateLowerColumns .columnContainer .mcnTextContent p}","value":"150% !important"}}},{"name":"Footer Text","selectors":"@media only screen and (max-width: 480px){.footerContainer .mcnTextContent, .footerContainer .mcnTextContent p}","tip":null,"props":{"font-size":{"selector":"@media only screen and (max-width: 480px){.footerContainer .mcnTextContent, .footerContainer .mcnTextContent p}","value":"14px !important"},"line-height":{"selector":"@media only screen and (max-width: 480px){.footerContainer .mcnTextContent, .footerContainer .mcnTextContent p}","value":"150% !important"}}}]},
+                "landingPagesLinks": null            });
+
+            window.app.setBlocks({"body_container":[{"id":393579,"type":"image","data":{"image":{"src":"https:\/\/gallery.mailchimp.com\/0b592b987dd8b24836fc697f3\/images\/b4844f86-4844-4a39-bf80-48cf022d3fd3.jpeg","alt":"","width":1024,"height":576,"contentId":107955},"edgeToEdge":false,"align":"center","variant":null},"create_time":"2018-05-23 19:07:03","last_updated":"2018-05-23 19:17:59","edited_by":"Jip Kurstjens","edited_by_id":103068649},{"id":393687,"type":"divider","data":{"styles":[{"name":"Divider style","selector":".mcnDividerBlockInner","props":{"padding-top":{"value":"18px"},"padding-bottom":{"value":"18px"},"border-top":{"value":"2px solid #EAEAEA","selector":".mcnDividerContent"},"background-color":{"selector":"mcBlockContainer"}}}],"variant":null},"create_time":"2018-05-23 19:17:35","last_updated":"2018-05-23 19:17:42","edited_by":"Jip Kurstjens","edited_by_id":103068649},{"id":393183,"type":"text","data":{"content":["<p>Wij vinden het tijd voor een feestje.<br\/>\nOmdat alles altijd verandert, willen we stil staan bij wat mijlpalen in ons leven.<\/p>\n\n<ul>\n\t<li>Onze woning waar we zo graag in vertoeven is bijna 100 jaar.<\/li>\n\t<li>Leon wordt dit jaar 60 jaar.<\/li>\n\t<li>Lia en leon delen dit jaar al meer dan 40 jaar lief en leed.<\/li>\n\t<li>Jip heeft de belangrijke leeftijd van 18 jaar bereikt.<\/li>\n<\/ul>\n\n<p><br\/>\n&nbsp;Samen met jullie\/jou willen we er een mooi feest van maken.<\/p>\n"],"numberOfColumns":1,"splitOption":[100],"selectedColumn":0,"styles":[{"name":"Text style","selector":".mcnTextContent, .mcnTextContentLeft, .mcnTextContentRight, .mcnTextContent p, .mcnTextContentLeft p, .mcnTextContentRight p","props":{"color":{"value":""},"font-family":{"value":""},"font-size":{"value":""},"font-style":{"value":""},"font-weight":{"value":""},"line-height":{"value":""},"text-align":{"value":""}}}],"variant":null},"create_time":"2018-05-23 18:36:54","last_updated":"2018-05-23 19:35:56","edited_by":"Jip Kurstjens","edited_by_id":103068649},{"id":393575,"type":"divider","data":{"styles":[{"name":"Divider style","selector":".mcnDividerBlockInner","props":{"padding-top":{"value":"18px"},"padding-bottom":{"value":"18px"},"border-top":{"value":"2px solid #EAEAEA","selector":".mcnDividerContent"},"background-color":{"selector":"mcBlockContainer"}}}],"variant":null},"create_time":"2018-05-23 19:06:34","last_updated":"2018-05-23 19:17:11","edited_by":"Jip Kurstjens","edited_by_id":103068649},{"id":393339,"type":"imageGroup","data":{"images":[{"src":"https:\/\/gallery.mailchimp.com\/0b592b987dd8b24836fc697f3\/images\/3d83839f-f22a-48a9-ae04-5f7156cfe4c5.jpeg","alt":"","width":714,"height":536,"contentId":107911,"originalUrl":"https:\/\/gallery.mailchimp.com\/0b592b987dd8b24836fc697f3\/images\/3d83839f-f22a-48a9-ae04-5f7156cfe4c5.jpeg"},{"src":"https:\/\/gallery.mailchimp.com\/0b592b987dd8b24836fc697f3\/images\/2c6e4798-d16d-4bdb-b23f-d746577b9c84.jpg","alt":"","width":1024,"height":768,"contentId":108003,"originalUrl":"https:\/\/gallery.mailchimp.com\/0b592b987dd8b24836fc697f3\/images\/2c6e4798-d16d-4bdb-b23f-d746577b9c84.jpg"}],"selectedLayout":[2],"variant":null},"create_time":"2018-05-23 18:48:09","last_updated":"2018-05-23 19:17:15","edited_by":"Jip Kurstjens","edited_by_id":103068649},{"id":393635,"type":"divider","data":{"styles":[{"name":"Divider style","selector":".mcnDividerBlockInner","props":{"padding-top":{"value":"18px"},"padding-bottom":{"value":"18px"},"border-top":{"value":"2px solid #EAEAEA","selector":".mcnDividerContent"},"background-color":{"selector":"mcBlockContainer"}}}],"variant":null},"create_time":"2018-05-23 19:13:57","last_updated":"2018-05-23 19:14:08","edited_by":"Jip Kurstjens","edited_by_id":103068649},{"id":393627,"type":"text","data":{"content":["<span style=\"font-size:18px\"><strong>Wanneer: 7 juli 2018<br\/>\nVanaf: 18:00 uur<\/strong><br\/>\n<strong>Locatie: Molenstraat 71 6099 AJ Beegden.<\/strong><\/span><br\/>\n<br\/>\n(Parkeren bij het voetbalveld in Beegden)<br\/>\n&nbsp;<br\/>\nKom je niet laat het ons weten voor 24 juli.<br\/>\nWil je blijven slapen, gezellig. (je eigen matras en slaapzak meebrengen) Laat het weten i.v.m. het ontbijt.<br\/>\n&nbsp;Je aanwezigheid is ons cadeau. Wil je op een andere manier iets bijdragen dan graag iets voor onze uitetengaanpot.<br\/>\n<br\/>\nHopelijk tot snel vriendelijkegroet,<br\/>\nLia, Leon &amp; Jip<br\/>\n<br\/>\nTel Lia : 06-28 91 39 17<br\/>\nTel Leon: 06-52 54 50 83<br\/>\n<br\/>\n<a href=\"mailto:Lia.debont@planet.nl\">Lia.debont@planet.nl<\/a><br\/>\n<a href=\"mailto:Leon.kurstjens@planet.nl\">Leon.kurstjens@planet.nl<\/a>"],"numberOfColumns":1,"splitOption":[100],"selectedColumn":0,"styles":[{"name":"Text style","selector":".mcnTextContent, .mcnTextContentLeft, .mcnTextContentRight, .mcnTextContent p, .mcnTextContentLeft p, .mcnTextContentRight p","props":{"color":{"value":""},"font-family":{"value":""},"font-size":{"value":""},"font-style":{"value":""},"font-weight":{"value":""},"line-height":{"value":""},"text-align":{"value":""}}}],"variant":null},"create_time":"2018-05-23 19:12:08","last_updated":"2018-05-23 19:36:31","edited_by":"Jip Kurstjens","edited_by_id":103068649},{"id":393639,"type":"divider","data":{"styles":[{"name":"Divider style","selector":".mcnDividerBlockInner","props":{"padding-top":{"value":"18px"},"padding-bottom":{"value":"18px"},"border-top":{"value":"2px solid #EAEAEA","selector":".mcnDividerContent"},"background-color":{"selector":"mcBlockContainer"}}}],"variant":null},"create_time":"2018-05-23 19:14:07","last_updated":"2018-05-23 19:15:17","edited_by":"Jip Kurstjens","edited_by_id":103068649},{"id":393615,"type":"image","data":{"image":{"alt":"","src":"https:\/\/gallery.mailchimp.com\/0b592b987dd8b24836fc697f3\/images\/7833e091-9916-4c32-b313-6ef75d45c5c2.jpeg","width":1024,"height":576,"originalUrl":"https:\/\/gallery.mailchimp.com\/0b592b987dd8b24836fc697f3\/images\/7833e091-9916-4c32-b313-6ef75d45c5c2.jpeg","contentId":108015},"edgeToEdge":false,"align":"center","variant":null},"create_time":"2018-05-23 19:08:18","last_updated":"2018-05-23 19:19:20","edited_by":"Jip Kurstjens","edited_by_id":103068649},{"id":393631,"type":"divider","data":{"styles":[{"name":"Divider style","selector":".mcnDividerBlockInner","props":{"padding-top":{"value":"18px"},"padding-bottom":{"value":"18px"},"border-top":{"value":"2px solid #EAEAEA","selector":".mcnDividerContent"},"background-color":{"selector":"mcBlockContainer"}}}],"variant":null},"create_time":"2018-05-23 19:13:46","last_updated":"2018-05-23 19:18:54","edited_by":"Jip Kurstjens","edited_by_id":103068649}],"footer_container":[],"header_container":[{"id":393179,"type":"text","data":{"content":["<h1><span style=\"color:#696969\"><span style=\"background-color:#D3D3D3\">&nbsp;Tijd voor een feest!&nbsp;<\/span><\/span><\/h1>\n"],"numberOfColumns":1,"splitOption":[100],"selectedColumn":0,"styles":[{"name":"Text style","selector":".mcnTextContent, .mcnTextContentLeft, .mcnTextContentRight, .mcnTextContent p, .mcnTextContentLeft p, .mcnTextContentRight p","props":{"color":{"value":""},"font-family":{"value":""},"font-size":{"value":""},"font-style":{"value":""},"font-weight":{"value":""},"line-height":{"value":""},"text-align":{"value":""}}}],"variant":null},"create_time":"2018-05-23 18:36:54","last_updated":"2018-05-23 19:29:27","edited_by":"Jip Kurstjens","edited_by_id":103068649}],"lower_left_column_container":[],"lower_right_column_container":[],"single_column_container":[],"upper_center_column_container":[],"upper_left_column_container":[],"upper_right_column_container":[]});
+            window.app.preservedContentBlocks = [];
+            window.app.setEditableMetadata({"valign":"top","class":"footerContainer","mc:container":"footer_container"});
+            
+            // Attempt to clear any onbeforeunload and force the current open editor to save.
+            function saveEditorOnLeave() {
+                window.onbeforeunload = null;
+                dRegistry.byId('editor-pane').saveEditor();
+            }
+            aspect.before(wizard, "goToNextStep", saveEditorOnLeave);
+
+            ready(function() {
+                new ViewerList({ app: app }, dom.byId('viewer-list'));
+
+                dom.byId('post-save-redir').value = ''; // so the back button doesn't retain the previous value and cause weirdness onsubmit
+
+                // Force the "Save & Exit" links to submit the form before redirecting.
+                var wizardForm = dom.byId('wizard-form');
+                if(wizardForm != null) {
+                    query('#wizard-exit ul a').on('click', function(e) {
+                        // Adding hidden input to pass the "save" parameter to the nextStep function so the user will be on the same step when they return.
+                        dojo.byId('wizard-exit').innerHTML = '<li class="c-wizardLink--top padding--lv3">Saving &hellip;<input type="hidden" name="save" value="save" /></li>';
+                        event.stop(e);
+                        dom.byId('post-save-redir').value = domAttr.get(this, 'href');
+
+                        saveEditorOnLeave();
+
+                                                    dom.byId('wizard-form').submit();
+                                            });
+                }
+
+                query('a.startTour').on('click', function(e) {
+                    coachmark.start();
+                    event.stop(e);
+                });
+
+                                    query('#start-tour-link').style('display','');
+                
+                app.setDesignStyles(dom.byId('design-editor'), {
+                    'selectedBanner': {"id":20,"url":"https:\/\/cdn-images.mailchimp.com\/monkey_rewards\/MC_MonkeyReward_15.png","width":"139","height":"54"},
+                    'banners': [{"id":46,"url":"https:\/\/cdn-images.mailchimp.com\/monkey_rewards\/rewards_failchips.png","width":"139","height":"59"},{"id":47,"url":"https:\/\/cdn-images.mailchimp.com\/monkey_rewards\/rewards_jailblimp.png","width":"139","height":"59"},{"id":48,"url":"https:\/\/cdn-images.mailchimp.com\/monkey_rewards\/rewards_mailshrimp.png","width":"139","height":"59"},{"id":49,"url":"https:\/\/cdn-images.mailchimp.com\/monkey_rewards\/rewards_whalesynth.png","width":"139","height":"59"},{"id":20,"url":"https:\/\/cdn-images.mailchimp.com\/monkey_rewards\/MC_MonkeyReward_15.png","width":"139","height":"54"},{"id":21,"url":"https:\/\/cdn-images.mailchimp.com\/monkey_rewards\/MC_MonkeyReward_16.png","width":"139","height":"54"},{"id":23,"url":"https:\/\/cdn-images.mailchimp.com\/monkey_rewards\/MC_MonkeyReward_18.png","width":"139","height":"54"},{"id":24,"url":"https:\/\/cdn-images.mailchimp.com\/monkey_rewards\/MC_MonkeyReward_19.png","width":"139","height":"54"},{"id":25,"url":"https:\/\/cdn-images.mailchimp.com\/monkey_rewards\/MC_MonkeyReward_20.png","width":"139","height":"54"},{"id":33,"url":"https:\/\/cdn-images.mailchimp.com\/monkey_rewards\/MC_MonkeyReward_08.png","width":"109","height":"45"},{"id":40,"url":"https:\/\/cdn-images.mailchimp.com\/monkey_rewards\/MC_MonkeyReward_04.png","width":"132","height":"122"},{"id":41,"url":"https:\/\/cdn-images.mailchimp.com\/monkey_rewards\/MC_MonkeyReward_05.png","width":"132","height":"122"},{"id":45,"url":"https:\/\/cdn-images.mailchimp.com\/monkey_rewards\/MC_MonkeyReward_26.png","width":"214","height":"56"}],
+                    'required': true,
+                    'status': 'Y'
+                });
+
+                mojo.app.wizard.instantiateEditorTabs(dojo.byId('tool-nav'));
+
+                // Restore user saved editor split value
+                                mojo.app.wizard.instantiateDragSplit(dojo.query('.drag-split')[0], 'neapolitan_split');
+
+                query('[data-kb-help]').on('click', function(e) {
+                    e.stopPropagation();
+                    e.preventDefault();
+                    KbSearch.main().show();
+                });
+            });
+        });
+
+        function onPreviewLoad() {
+            require(["dojo/domReady!"], function() {
+                loadPreview();
+            });
+        };
+    </script> <style>.cke{visibility:hidden;}</style><script type="text/javascript" src="./Campaign Builder - Template Designer _ MailChimp_files/pusher.min.js.download" id="dojo_request_script0" async="" charset="utf-8"></script><link href="./Campaign Builder - Template Designer _ MailChimp_files/css(2)" rel="stylesheet"><script type="text/javascript" src="./Campaign Builder - Template Designer _ MailChimp_files/mcneapolitanconfig.js.download"></script><link rel="stylesheet" type="text/css" href="./Campaign Builder - Template Designer _ MailChimp_files/editor.css"><script type="text/javascript" src="./Campaign Builder - Template Designer _ MailChimp_files/nl.js.download"></script><script type="text/javascript" src="./Campaign Builder - Template Designer _ MailChimp_files/fckeditor-style"></script><script type="text/javascript" src="./Campaign Builder - Template Designer _ MailChimp_files/plugin.js.download"></script><script type="text/javascript" src="./Campaign Builder - Template Designer _ MailChimp_files/plugin.js(1).download"></script><script type="text/javascript" src="./Campaign Builder - Template Designer _ MailChimp_files/plugin.js(2).download"></script><script type="text/javascript" src="./Campaign Builder - Template Designer _ MailChimp_files/plugin.js(3).download"></script><script type="text/javascript" src="./Campaign Builder - Template Designer _ MailChimp_files/plugin.js(4).download"></script><script type="text/javascript" src="./Campaign Builder - Template Designer _ MailChimp_files/plugin.js(5).download"></script><script type="text/javascript" src="./Campaign Builder - Template Designer _ MailChimp_files/plugin.js(6).download"></script><script type="text/javascript" src="./Campaign Builder - Template Designer _ MailChimp_files/en.js.download"></script><link rel="stylesheet" type="text/css" href="./Campaign Builder - Template Designer _ MailChimp_files/aspell.css"></head><span id="warning-container"><i data-reactroot=""></i></span> <body class="c-builder  neapolitan open-drawer" cz-shortcut-listen="true">   <noscript> <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MCZTKL" height="0" width="0" style="display:none;visibility:hidden"> </iframe> </noscript> 
+ <div data-dojo-type="mojo/widgets/KbSearch" class="kb-overlay-container c-baseOverlay selfclear" role="search" aria-hidden="true" id="uniqName_56_0" widgetid="uniqName_56_0">  <div title="Close menu" data-dojo-attach-point="closeButton" class="close-overlay close-right freddicon cross absolute cursor-pointer"></div> <div> <div data-dojo-attach-point="searchPanel" class="global-search mc-small-content"> <form data-dojo-attach-point="searchForm" class="kb-search !margin-bottom--lv8" method="get" novalidate="novalidate"> <h2 class="alignc !margin-bottom--lv4 fwb">Search the Knowledge Base</h2>  <div class="big-search-container relative !margin-bottom--lv3">  <input data-dojo-attach-point="searchInput" name="kb-search" class="big-search-field !margin--lv0 full-width av-search" type="search" tabindex="0" autofocus="autofocus" placeholder="Search articles" id="kb-search">  <span class="big-search-controls"> <span data-dojo-attach-point="clearIcon" class="freddicon cross clear-search hide cursor-pointer absolute"></span> <button data-dojo-attach-point="searchIcon" type="submit" class="button freddicon solidsearch !margin--lv0"></button> </span>  <div class="loading-search hide padding--lv5 absolute" data-dojo-attach-point="searchLoader"></div> </div> <input type="hidden" name="__csrf_token" id="" value="81953782938d58a71291b8112fa652cfb27dc14b" class="av-hidden"></form>   <div class="line section hide search-error"> <div class="feedback-block error"> <div class="lastUnit size1of1"> <div class="media"> <div class="media-image"> <span class="freddicon not-allowed"></span> </div> <div class="media-body"> <h4>Something went wrong.</h4> <p>There was an error processing the request.</p> </div> </div> </div> </div> </div>  <div id="kb-recommended" class="kb-recommended line main-section" data-dojo-attach-point="recommendedContainer"> <div class="lastGroup size1of1"> <h3>Recommended Articles</h3> <ul class="recommended-articles"> <li class="padding--lv3 !padding-left-right--lv0 border-bottom"> <h4 class="kb-heading !margin--lv0"> <a mc:track="recommended article" href="https://kb.mailchimp.com/accounts/management/collect-consent-with-gdpr-forms?" target="_blank" data-kb-article="/accounts/management/collect-consent-with-gdpr-forms"> Collect Consent with GDPR Forms </a> </h4> <p class="kb-content !margin--lv0"> Learn how to use MailChimp's GDPR-friendly tools to collect consent from new and existing contacts. </p> </li> <li class="padding--lv3 !padding-left-right--lv0 border-bottom"> <h4 class="kb-heading !margin--lv0"> <a mc:track="recommended article" href="https://kb.mailchimp.com/accounts/management/gdpr-faq?" target="_blank" data-kb-article="/accounts/management/gdpr-faq"> General Data Protection Regulation FAQs </a> </h4> <p class="kb-content !margin--lv0"> Get answers to common questions about MailChimp and the GDPR. </p> </li> <li class="padding--lv3 !padding-left-right--lv0 border-bottom"> <h4 class="kb-heading !margin--lv0"> <a mc:track="recommended article" href="https://kb.mailchimp.com/integrations/api-integrations/about-api-keys?" target="_blank" data-kb-article="/integrations/api-integrations/about-api-keys"> About API Keys </a> </h4> <p class="kb-content !margin--lv0"> API keys let integrations and other apps access your MailChimp account. Learn how to create and manage API keys for your account. </p> </li> <li class="padding--lv3 !padding-left-right--lv0 border-bottom"> <h4 class="kb-heading !margin--lv0"> <a mc:track="recommended article" href="https://kb.mailchimp.com/lists/manage-contacts/about-cleaned-contacts?" target="_blank" data-kb-article="/lists/manage-contacts/about-cleaned-contacts"> About Cleaned Contacts </a> </h4> <p class="kb-content !margin--lv0"> Cleaned contacts have addresses that have bounced and are considered invalid. Learn how to view, download, or fix cleaned contacts. </p> </li> <li class="padding--lv3 !padding-left-right--lv0 border-bottom"> <h4 class="kb-heading !margin--lv0"> <a mc:track="recommended article" href="https://kb.mailchimp.com/lists/manage-contacts/view-unsubscribed-contacts?" target="_blank" data-kb-article="/lists/manage-contacts/view-unsubscribed-contacts"> View Unsubscribed Contacts </a> </h4> <p class="kb-content !margin--lv0"> Learn where to view unsubscribed and cleaned emails for your MailChimp lists, and how to use this info to improve your marketing strategy. </p> </li> <li class="padding--lv3 !padding-left-right--lv0 border-bottom"> <h4 class="kb-heading !margin--lv0"> <a mc:track="recommended article" href="https://kb.mailchimp.com/automation/create-an-automation?" target="_blank" data-kb-article="/automation/create-an-automation"> Create an Automation </a> </h4> <p class="kb-content !margin--lv0"> Use automations to create a targeted series of emails that send when triggered by a specific date, event, or subscriber's activity. </p> </li> 
+ </ul> </div> </div>  <div id="kb-results" class="line main-section" data-dojo-attach-point="resultsContainer" style="display: none;"> <div class="lastGroup size1of1 section">  <div class="line" data-dojo-attach-point="resultsList"></div> </div> </div> </div> <div data-dojo-attach-point="contentPanel" class="global-search mc-small-content" style="display: none;"> <a class="p !margin-bottom--lv6" href="https://us18.admin.mailchimp.com/campaigns/wizard/neapolitan?id=46491#" data-dojo-attach-point="backLink"> <span class="freddicon menu-left-on-left" role="presentation" aria-hidden="true"></span>Back to Search </a> <div data-dojo-attach-point="contentContainer"></div> </div> </div> </div>  <script type="text/javascript">
+    var reauth = {
+        url: '/login/reauthenticate?username=Jip_Kurstjens&user_id=96099833',
+        rememberMe : false    };
+
+    dojo.require('mojo.ReauthDialog');
+
+    // Override dojo's xhr to handle 403 status
+    (function(){
+        var oldXHR = dojo.xhr;
+        dojo.xhr = function() {
+            return oldXHR.apply(dojo, arguments).addErrback(function(err) {
+                switch(err.xhr.status) {
+                    case 403:
+                        window.top.mojo.ReauthDialog.show();
+                        break;
+                }
+            });
+        };
+    })();
+</script> <script type="text/javascript">
+    // Handle 403 errors when making ajax calls through dojo/request which is the newer module.
+    require([
+        "dojo/request",
+        "dojo/request/notify"
+    ], function(request, notify) {
+        notify("error", function( error ) {
+            switch(error.response.status) {
+                case 403:
+                    window.top.mojo.ReauthDialog.show();
+                    break;
+            }
+        });
+    });
+</script>  <div class="wizard-container last-step"> <div id="av-neapolitan-content"> <div class="lastUnit size1of1 overflow-visible flex-shrink-none"> <div id="av-flash-block" class="c-flashBlock">    </div> </div>   <div id="main" class="hide-legacy-ie"> <div id="editor"> <div class="column split-left" id="previewcol"> <span role="presentation" aria-hidden="true" class="drag-split" title="Click and drag to resize the columns. Double click to reset position."></span> <div class="colbody nolist ms-overflow-style--scrollebar@ie10" id="preview-template-container"> <div class="iframe-wrapper"> <div class="iframe-loading-message design" style="display: none;"><div class="loadingbar alignc"><img src="./Campaign Builder - Template Designer _ MailChimp_files/pulse.png" class="pulse margin--lv2"><br><strong>Loading...</strong></div></div> <div class="iframe-dnd-overlay" style="height: 2688px;"><ul class="mc-container-ghost dojoDndContainer dojoDndTarget"><span class="sectionLabel">header </span></ul><ul class="mc-container-ghost dojoDndContainer dojoDndTarget"><span class="sectionLabel">body </span></ul><ul class="mc-container-ghost dojoDndContainer dojoDndTarget"><span class="sectionLabel">upper left column </span></ul><ul class="mc-container-ghost dojoDndContainer dojoDndTarget"><span class="sectionLabel">upper center column </span></ul><ul class="mc-container-ghost dojoDndContainer dojoDndTarget"><span class="sectionLabel">upper right column </span></ul><ul class="mc-container-ghost dojoDndContainer dojoDndTarget"><span class="sectionLabel">single column </span></ul><ul class="mc-container-ghost dojoDndContainer dojoDndTarget"><span class="sectionLabel">lower left column </span></ul><ul class="mc-container-ghost dojoDndContainer dojoDndTarget"><span class="sectionLabel">lower right column </span></ul><ul class="mc-container-ghost dojoDndContainer dojoDndTarget"><span class="sectionLabel">footer </span></ul></div> <iframe id="preview-template" src="./Campaign Builder - Template Designer _ MailChimp_files/preview.html" frameborder="0" onload="onPreviewLoad();" style="height: 2688px; min-height: 564px;"></iframe> </div> </div> </div> <div class="column split-right" id="toolcol"> <div class="wizard-header"> <ul id="tool-nav" class="panel-button-nav border-bottom flex"> <li class="c-buttonGroupItem v-buttonGroupItemFlex"> <button type="button" id="content-link" class="c-buttonGroupButton
+                                    v-buttonGroupBordered
+                                    v-buttonGroupButtonFlex
+                                    v-buttonGroupBordered--active">Content </button> </li> <li class="c-buttonGroupItem v-buttonGroupItemFlex"> <button type="button" id="design-link" class="c-buttonGroupButton
+                                    v-buttonGroupBordered
+                                    v-buttonGroupButtonFlex
+                                    ">Design </button> </li> <li class="c-buttonGroupItem v-buttonGroupItemFlex"> <button type="button" id="feedback-link" class="c-buttonGroupButton
+                                    v-buttonGroupBordered
+                                    v-buttonGroupButtonFlex">Comments <span class="badge p0 margin--lv2 !margin-top-bottom--lv0 !margin-right--lv0" id="comments-unread-count" style="display:none;"></span></button> </li> </ul> </div> <div class="colbody"> <div id="toolcol-panes" data-dojo-type="dijit/layout/StackContainer" class="dijitStackContainer dijitContainer dijitLayoutContainer full-height" widgetid="toolcol-panes"> <div role="tabpanel" class="dijitStackContainerChildWrapper dijitVisible" aria-label="Content"><div id="content-pane" data-dojo-type="dijit/layout/ContentPane" selected="true" class="dijitContentPane dijitStackContainer-child dijitStackContainer-dijitContentPane" widgetid="content-pane" style="left: 0px; top: 0px; width: 665px; height: 504px;"> <ul id="blocks-container" class="block padding--lv4 !padding-bottom--lv0 !padding-left-right--lv0 dojoDndSource dojoDndTarget dojoDndContainer"><li class="mojoBlockSourceItem float-left alignc selfclear  dojoDndItem" title="Add some text." id="dojoUnique1">
+    <img src="./Campaign Builder - Template Designer _ MailChimp_files/text.svg">
+    <div class="small-meta fwb">Text</div>
+</li><li class="mojoBlockSourceItem float-left alignc selfclear  dojoDndItem" title="Highlight a block of text." id="dojoUnique2">
+    <img src="./Campaign Builder - Template Designer _ MailChimp_files/boxedText.svg">
+    <div class="small-meta fwb">Boxed Text</div>
+</li><li class="mojoBlockSourceItem float-left alignc selfclear  dojoDndItem" title="Visually separate your content." id="dojoUnique3">
+    <img src="./Campaign Builder - Template Designer _ MailChimp_files/divider.svg">
+    <div class="small-meta fwb">Divider</div>
+</li><li class="mojoBlockSourceItem float-left alignc selfclear  dojoDndItem" title="Drop an image into your template." id="dojoUnique4">
+    <img src="./Campaign Builder - Template Designer _ MailChimp_files/image.svg">
+    <div class="small-meta fwb">Image</div>
+</li><li class="mojoBlockSourceItem float-left alignc selfclear  dojoDndItem" title="Arrange a collection of images." id="dojoUnique5">
+    <img src="./Campaign Builder - Template Designer _ MailChimp_files/imageGroup.svg">
+    <div class="small-meta fwb">Image Group</div>
+</li><li class="mojoBlockSourceItem float-left alignc selfclear  dojoDndItem" title="Build a card with an image and caption." id="dojoUnique6">
+    <img src="./Campaign Builder - Template Designer _ MailChimp_files/imageCard.svg">
+    <div class="small-meta fwb">Image Card</div>
+</li><li class="mojoBlockSourceItem float-left alignc selfclear  dojoDndItem" title="Add an image with a descriptive caption." id="dojoUnique7">
+    <img src="./Campaign Builder - Template Designer _ MailChimp_files/imageCaption.svg">
+    <div class="small-meta fwb">Image + Caption</div>
+</li><li class="mojoBlockSourceItem float-left alignc selfclear  dojoDndItem" title="Encourage your audience to share your content." id="dojoUnique8">
+    <img src="./Campaign Builder - Template Designer _ MailChimp_files/socialShare.svg">
+    <div class="small-meta fwb">Social Share</div>
+</li><li class="mojoBlockSourceItem float-left alignc selfclear  dojoDndItem" title="Promote your social media accounts." id="dojoUnique9">
+    <img src="./Campaign Builder - Template Designer _ MailChimp_files/socialFollow.svg">
+    <div class="small-meta fwb">Social Follow</div>
+</li><li class="mojoBlockSourceItem float-left alignc selfclear  dojoDndItem" title="Create a prominent call to action." id="dojoUnique10">
+    <img src="./Campaign Builder - Template Designer _ MailChimp_files/button.svg">
+    <div class="small-meta fwb">Button</div>
+</li><li class="mojoBlockSourceItem float-left alignc selfclear  dojoDndItem" title="Insert your contact information and required unsubscribe link." id="dojoUnique11">
+    <img src="./Campaign Builder - Template Designer _ MailChimp_files/footer.svg">
+    <div class="small-meta fwb">Footer</div>
+</li><li class="mojoBlockSourceItem float-left alignc selfclear  dojoDndItem" title="Use your own custom HTML." id="dojoUnique12">
+    <img src="./Campaign Builder - Template Designer _ MailChimp_files/code.svg">
+    <div class="small-meta fwb">Code</div>
+</li><li class="mojoBlockSourceItem float-left alignc selfclear  dojoDndItem" title="Add a video." id="dojoUnique13">
+    <img src="./Campaign Builder - Template Designer _ MailChimp_files/video.svg">
+    <div class="small-meta fwb">Video</div>
+</li></ul> <div id="start-tour-link" style="" class="clear padding--lv3 alignc small-meta"> Need a refresher? <a href="https://us18.admin.mailchimp.com/campaigns/wizard/neapolitan?id=46491#" class="startTour">Take a quick tour</a>. </div> </div></div> <div role="tabpanel" class="dijitStackContainerChildWrapper dijitHidden" aria-label="Design"><div id="design-pane" data-dojo-type="dijit/layout/ContentPane" selected="false" class="dijitContentPane dijitStackContainer-child dijitStackContainer-dijitContentPane" widgetid="design-pane"> <div id="design-editor" widgetid="design-editor">
+    <ul data-dojo-attach-point="mainNav" class="drillnav block relative"><li><a href="https://us18.admin.mailchimp.com/campaigns/wizard/neapolitan?id=46491#">Page</a></li><li><a href="https://us18.admin.mailchimp.com/campaigns/wizard/neapolitan?id=46491#">Header</a></li><li><a href="https://us18.admin.mailchimp.com/campaigns/wizard/neapolitan?id=46491#">Body</a></li><li><a href="https://us18.admin.mailchimp.com/campaigns/wizard/neapolitan?id=46491#">Upper Columns</a></li><li><a href="https://us18.admin.mailchimp.com/campaigns/wizard/neapolitan?id=46491#">Lower Columns</a></li><li><a href="https://us18.admin.mailchimp.com/campaigns/wizard/neapolitan?id=46491#">Footer</a></li><li><a href="https://us18.admin.mailchimp.com/campaigns/wizard/neapolitan?id=46491#">Mobile Styles</a></li><li><a href="https://us18.admin.mailchimp.com/campaigns/wizard/neapolitan?id=46491#">MonkeyRewards</a></li></ul>
+</div> </div></div> <div role="tabpanel" class="dijitStackContainerChildWrapper dijitHidden" aria-label="Comments"><div id="feedback-pane" data-dojo-type="dijit/layout/ContentPane" selected="false" style="display: block;" class="dijitContentPane dijitStackContainer-child dijitStackContainer-dijitContentPane" widgetid="feedback-pane"> <div id="feedback-editor" widgetid="feedback-editor">
+    <div class="editorscroll editorscroll--noPanel">
+        <div data-dojo-attach-point="allFeedback" style="display:none">
+            <div id="feedback-list" data-dojo-attach-point="feedbackList">
+                <ul data-dojo-attach-point="uncompletedNav" class="drillnav block relative"></ul>
+            </div>
+            <div id="completed-feedback-list" style="display:none;">
+                <ul data-dojo-attach-point="completedNav" class="drillnav block relative"></ul>
+            </div>
+        </div>
+        <div class="c-noDataBlock text-align--center border-gray border-radius--lv2 noborder" id="no-feedback-block" widgetid="no-feedback-block">
+    <div data-dojo-attach-point="containerNode">
+        <div class="c-noDataBlock_icon" style="background-image: url(/css/icons/no-data/empty-comments.svg)" data-dojo-attach-point="noDataIcon"></div>
+        <h2 class="c-noDataBlock_title" data-dojo-attach-point="noDataTitle">Get feedback on this campaign.</h2>
+        <p class="c-noDataBlock_message" data-dojo-attach-point="noDataMessage">Start by <a href="https://us18.admin.mailchimp.com/campaigns/wizard/neapolitan?id=46491#" data-dojo-attach-point="sendTestLink">sending a test email</a> to your collaborators.<br>When they reply their comments will appear here.</p>
+        <a href="https://us18.admin.mailchimp.com/campaigns/wizard/neapolitan?id=46491" class="c-noDataBlock_action button p0 float--none hide" data-dojo-attach-point="noDataButton"></a>
+    </div>
+</div>
+    </div>
+    <div class="c-actionButtonsPane">
+        <button class="button p0" data-dojo-attach-event="onclick:newTopic">Add a Comment</button>
+        <a href="https://us18.admin.mailchimp.com/campaigns/wizard/neapolitan?id=46491#" data-dojo-attach-event="onclick:showNotifications" class="small-meta fwb">Notifications</a>
+    </div>
+</div> </div></div> </div> </div> <div id="editor-pane" widgetid="editor-pane" style="display: block;" class=""><div data-dojo-attach-point="container" style="width: 100%; height: 100%; position: absolute; left: 0px; top: 0px; bottom: 0px; overflow: hidden; background: rgb(255, 255, 255);" class=""><div class="mojoTextEditor" id="uniqName_21_0" widgetid="uniqName_21_0">
+
+    <div class="mojoEditorContainer colbody colbodyInner" id="mojo_neapolitan_widgets_EditorContainer_0" widgetid="mojo_neapolitan_widgets_EditorContainer_0">
+    <div class="drillnavbar alignc">
+        <h4>Text</h4>
+    </div>
+
+    <div data-dojo-attach-point="containerNode" class="colbody">
+        <ul class="editorsection panel-button-nav flex !margin-bottom--lv3" data-dojo-attach-point="sectionList"><li class="c-buttonGroupItem v-buttonGroupItemFlex"><button type="button" class="c-buttonGroupButton v-buttonGroupBordered v-buttonGroupButtonFlex v-buttonGroupBordered--active" data-section="content">Content</button></li><li class="c-buttonGroupItem v-buttonGroupItemFlex"><button type="button" class="c-buttonGroupButton v-buttonGroupBordered v-buttonGroupButtonFlex" data-section="style">Style</button></li><li class="c-buttonGroupItem v-buttonGroupItemFlex"><button type="button" class="c-buttonGroupButton v-buttonGroupBordered v-buttonGroupButtonFlex" data-section="settings">Settings</button></li></ul>
+    
+        <div class="mojoEditorSection colbody contentEditorSection active" data-mojo-section="content" data-mojo-ck-scroll="true" style="display: block;">
+            <div data-dojo-attach-point="columnSelector" class="c-editortabs"></div>
+            <div class="c-ckeditorContainer" data-dojo-attach-point="ckeditorContainer"><div id="cke_editor1" class="cke_1 cke cke_reset cke_chrome cke_editor_editor1 cke_ltr cke_browser_webkit cke_hidpi cke_focus" dir="ltr" lang="nl" role="application" aria-labelledby="cke_editor1_arialbl"><span id="cke_editor1_arialbl" class="cke_voice_label">Tekstverwerker, editor1</span><div class="cke_inner cke_reset" role="presentation"><span id="cke_1_top" class="cke_top cke_reset_all" role="presentation" style="height: auto; user-select: none;"><span id="cke_9" class="cke_voice_label">Werkbalken</span><span id="cke_1_toolbox" class="cke_toolbox" role="group" aria-labelledby="cke_9" onmousedown="return false;"><span class="cke_toolbox_main"><span id="cke_14" class="cke_toolbar" role="toolbar"><span class="cke_toolbar_start"></span><span class="cke_toolgroup" role="presentation"><a id="cke_15" class="cke_button cke_button__bold cke_button_off" href="javascript:void(&#39;Vet&#39;)" title="Vet" tabindex="-1" hidefocus="true" role="button" aria-labelledby="cke_15_label" aria-haspopup="false" onkeydown="return CKEDITOR.tools.callFunction(0,event);" onfocus="return CKEDITOR.tools.callFunction(1,event);" onclick="CKEDITOR.tools.callFunction(2,this);return false;"><span class="cke_button_icon cke_button__bold_icon " style="background-image:url(&#39;https://us18.admin.mailchimp.com/release/1.1.1041a4e59d542af9f36023a39e5553bc59f72694c/js/ckeditor4/ckeditor/plugins/icons_hidpi.png?t=I4NI&#39;);background-position:0 -48px;background-size:16px;">&nbsp;</span><span id="cke_15_label" class="cke_button_label cke_button__bold_label" aria-hidden="false">Vet</span></a><a id="cke_16" class="cke_button cke_button__italic cke_button_off" href="javascript:void(&#39;Cursief&#39;)" title="Cursief" tabindex="-1" hidefocus="true" role="button" aria-labelledby="cke_16_label" aria-haspopup="false" onkeydown="return CKEDITOR.tools.callFunction(3,event);" onfocus="return CKEDITOR.tools.callFunction(4,event);" onclick="CKEDITOR.tools.callFunction(5,this);return false;"><span class="cke_button_icon cke_button__italic_icon " style="background-image:url(&#39;https://us18.admin.mailchimp.com/release/1.1.1041a4e59d542af9f36023a39e5553bc59f72694c/js/ckeditor4/ckeditor/plugins/icons_hidpi.png?t=I4NI&#39;);background-position:0 -72px;background-size:16px;">&nbsp;</span><span id="cke_16_label" class="cke_button_label cke_button__italic_label" aria-hidden="false">Cursief</span></a><a id="cke_17" class="cke_button cke_button__underline cke_button_off" href="javascript:void(&#39;Onderstrepen&#39;)" title="Onderstrepen" tabindex="-1" hidefocus="true" role="button" aria-labelledby="cke_17_label" aria-haspopup="false" onkeydown="return CKEDITOR.tools.callFunction(6,event);" onfocus="return CKEDITOR.tools.callFunction(7,event);" onclick="CKEDITOR.tools.callFunction(8,this);return false;"><span class="cke_button_icon cke_button__underline_icon " style="background-image:url(&#39;https://us18.admin.mailchimp.com/release/1.1.1041a4e59d542af9f36023a39e5553bc59f72694c/js/ckeditor4/ckeditor/plugins/icons_hidpi.png?t=I4NI&#39;);background-position:0 -168px;background-size:16px;">&nbsp;</span><span id="cke_17_label" class="cke_button_label cke_button__underline_label" aria-hidden="false">Onderstrepen</span></a><a id="cke_18" class="cke_button cke_button__link cke_button_off" href="javascript:void(&#39;Link invoegen/wijzigen&#39;)" title="Link invoegen/wijzigen" tabindex="-1" hidefocus="true" role="button" aria-labelledby="cke_18_label" aria-haspopup="false" onkeydown="return CKEDITOR.tools.callFunction(9,event);" onfocus="return CKEDITOR.tools.callFunction(10,event);" onclick="CKEDITOR.tools.callFunction(11,this);return false;"><span class="cke_button_icon cke_button__link_icon " style="background-image:url(&#39;https://us18.admin.mailchimp.com/release/1.1.1041a4e59d542af9f36023a39e5553bc59f72694c/js/ckeditor4/ckeditor/plugins/icons_hidpi.png?t=I4NI&#39;);background-position:0 -1320px;background-size:16px;">&nbsp;</span><span id="cke_18_label" class="cke_button_label cke_button__link_label" aria-hidden="false">Link invoegen/wijzigen</span></a><a id="cke_19" class="cke_button cke_button__unlink cke_button_disabled " href="javascript:void(&#39;Link verwijderen&#39;)" title="Link verwijderen" tabindex="-1" hidefocus="true" role="button" aria-labelledby="cke_19_label" aria-haspopup="false" aria-disabled="true" onkeydown="return CKEDITOR.tools.callFunction(12,event);" onfocus="return CKEDITOR.tools.callFunction(13,event);" onclick="CKEDITOR.tools.callFunction(14,this);return false;"><span class="cke_button_icon cke_button__unlink_icon " style="background-image:url(&#39;https://us18.admin.mailchimp.com/release/1.1.1041a4e59d542af9f36023a39e5553bc59f72694c/js/ckeditor4/ckeditor/plugins/icons_hidpi.png?t=I4NI&#39;);background-position:0 -1344px;background-size:16px;">&nbsp;</span><span id="cke_19_label" class="cke_button_label cke_button__unlink_label" aria-hidden="false">Link verwijderen</span></a><a id="cke_20" class="cke_button cke_button__mcimage cke_button_off" href="javascript:void(&#39;Content Manager&#39;)" title="Content Manager" tabindex="-1" hidefocus="true" role="button" aria-labelledby="cke_20_label" aria-haspopup="false" onkeydown="return CKEDITOR.tools.callFunction(15,event);" onfocus="return CKEDITOR.tools.callFunction(16,event);" onclick="CKEDITOR.tools.callFunction(17,this);return false;"><span class="cke_button_icon cke_button__mcimage_icon " style="background-image:url(&#39;https://us18.admin.mailchimp.com/release/1.1.1041a4e59d542af9f36023a39e5553bc59f72694c/js/ckeditor4/ckeditor/plugins/icons_hidpi.png?t=I4NI&#39;);background-position:0 -1512px;background-size:16px;">&nbsp;</span><span id="cke_20_label" class="cke_button_label cke_button__mcimage_label" aria-hidden="false">Content Manager</span></a><a id="cke_21" class="cke_button cke_button__numberedlist cke_button_off" href="javascript:void(&#39;Genummerde lijst invoegen&#39;)" title="Genummerde lijst invoegen" tabindex="-1" hidefocus="true" role="button" aria-labelledby="cke_21_label" aria-haspopup="false" onkeydown="return CKEDITOR.tools.callFunction(18,event);" onfocus="return CKEDITOR.tools.callFunction(19,event);" onclick="CKEDITOR.tools.callFunction(20,this);return false;"><span class="cke_button_icon cke_button__numberedlist_icon " style="background-image:url(&#39;https://us18.admin.mailchimp.com/release/1.1.1041a4e59d542af9f36023a39e5553bc59f72694c/js/ckeditor4/ckeditor/plugins/icons_hidpi.png?t=I4NI&#39;);background-position:0 -1440px;background-size:16px;">&nbsp;</span><span id="cke_21_label" class="cke_button_label cke_button__numberedlist_label" aria-hidden="false">Genummerde lijst invoegen</span></a><a id="cke_22" class="cke_button cke_button__bulletedlist cke_button_off" href="javascript:void(&#39;Opsomming invoegen&#39;)" title="Opsomming invoegen" tabindex="-1" hidefocus="true" role="button" aria-labelledby="cke_22_label" aria-haspopup="false" onkeydown="return CKEDITOR.tools.callFunction(21,event);" onfocus="return CKEDITOR.tools.callFunction(22,event);" onclick="CKEDITOR.tools.callFunction(23,this);return false;"><span class="cke_button_icon cke_button__bulletedlist_icon " style="background-image:url(&#39;https://us18.admin.mailchimp.com/release/1.1.1041a4e59d542af9f36023a39e5553bc59f72694c/js/ckeditor4/ckeditor/plugins/icons_hidpi.png?t=I4NI&#39;);background-position:0 -1392px;background-size:16px;">&nbsp;</span><span id="cke_22_label" class="cke_button_label cke_button__bulletedlist_label" aria-hidden="false">Opsomming invoegen</span></a><a id="cke_23" class="cke_button cke_button__pastetext cke_button_off" href="javascript:void(&#39;Plakken als platte tekst&#39;)" title="Plakken als platte tekst" tabindex="-1" hidefocus="true" role="button" aria-labelledby="cke_23_label" aria-haspopup="false" onkeydown="return CKEDITOR.tools.callFunction(24,event);" onfocus="return CKEDITOR.tools.callFunction(25,event);" onclick="CKEDITOR.tools.callFunction(26,this);return false;"><span class="cke_button_icon cke_button__pastetext_icon " style="background-image:url(&#39;https://us18.admin.mailchimp.com/release/1.1.1041a4e59d542af9f36023a39e5553bc59f72694c/js/ckeditor4/ckeditor/plugins/icons_hidpi.png?t=I4NI&#39;);background-position:0 -1704px;background-size:16px;">&nbsp;</span><span id="cke_23_label" class="cke_button_label cke_button__pastetext_label" aria-hidden="false">Plakken als platte tekst</span></a><a id="cke_24" class="cke_button cke_button__pastefromword cke_button_off" href="javascript:void(&#39;Plakken vanuit Word&#39;)" title="Plakken vanuit Word" tabindex="-1" hidefocus="true" role="button" aria-labelledby="cke_24_label" aria-haspopup="false" onkeydown="return CKEDITOR.tools.callFunction(27,event);" onfocus="return CKEDITOR.tools.callFunction(28,event);" onclick="CKEDITOR.tools.callFunction(29,this);return false;"><span class="cke_button_icon cke_button__pastefromword_icon " style="background-image:url(&#39;https://us18.admin.mailchimp.com/release/1.1.1041a4e59d542af9f36023a39e5553bc59f72694c/js/ckeditor4/ckeditor/plugins/icons_hidpi.png?t=I4NI&#39;);background-position:0 -1656px;background-size:16px;">&nbsp;</span><span id="cke_24_label" class="cke_button_label cke_button__pastefromword_label" aria-hidden="false">Plakken vanuit Word</span></a><a id="cke_25" class="cke_button cke_button__removeformat cke_button_off" href="javascript:void(&#39;Opmaak verwijderen&#39;)" title="Opmaak verwijderen" tabindex="-1" hidefocus="true" role="button" aria-labelledby="cke_25_label" aria-haspopup="false" onkeydown="return CKEDITOR.tools.callFunction(30,event);" onfocus="return CKEDITOR.tools.callFunction(31,event);" onclick="CKEDITOR.tools.callFunction(32,this);return false;"><span class="cke_button_icon cke_button__removeformat_icon " style="background-image:url(&#39;https://us18.admin.mailchimp.com/release/1.1.1041a4e59d542af9f36023a39e5553bc59f72694c/js/ckeditor4/ckeditor/plugins/icons_hidpi.png?t=I4NI&#39;);background-position:0 -1824px;background-size:16px;">&nbsp;</span><span id="cke_25_label" class="cke_button_label cke_button__removeformat_label" aria-hidden="false">Opmaak verwijderen</span></a><a id="cke_26" class="cke_button cke_button__source cke_button_off" href="javascript:void(&#39;Broncode&#39;)" title="Broncode" tabindex="-1" hidefocus="true" role="button" aria-labelledby="cke_26_label" aria-haspopup="false" onkeydown="return CKEDITOR.tools.callFunction(33,event);" onfocus="return CKEDITOR.tools.callFunction(34,event);" onclick="CKEDITOR.tools.callFunction(35,this);return false;"><span class="cke_button_icon cke_button__source_icon " style="background-image:url(&#39;https://us18.admin.mailchimp.com/release/1.1.1041a4e59d542af9f36023a39e5553bc59f72694c/js/ckeditor4/ckeditor/plugins/icons_hidpi.png?t=I4NI&#39;);background-position:0 -1992px;background-size:16px;">&nbsp;</span><span id="cke_26_label" class="cke_button_label cke_button__source_label" aria-hidden="false">Broncode</span></a></span><span class="cke_toolbar_end"></span></span><span class="cke_toolbar_break"></span><span id="cke_27" class="cke_toolbar" role="toolbar"><span class="cke_toolbar_start"></span><span id="cke_10" class="cke_combo cke_combo__styles cke_combo_off" role="presentation"><span id="cke_10_label" class="cke_combo_label">Stijl</span><a class="cke_combo_button" title="Opmaakstijlen" tabindex="-1" href="javascript:void(&#39;Opmaakstijlen&#39;)" hidefocus="true" role="button" aria-labelledby="cke_10_label" aria-haspopup="true" onkeydown="return CKEDITOR.tools.callFunction(37,event,this);" onfocus="return CKEDITOR.tools.callFunction(38,event);" onclick="CKEDITOR.tools.callFunction(36,this);return false;"><span id="cke_10_text" class="cke_combo_text">Default Text</span><span class="cke_combo_open"><span class="cke_combo_arrow"></span></span></a></span><span id="cke_11" class="cke_combo cke_combo__font cke_combo_off" role="presentation"><span id="cke_11_label" class="cke_combo_label">Font</span><a class="cke_combo_button" title="Standard web fonts" tabindex="-1" href="javascript:void(&#39;Standard web fonts&#39;)" hidefocus="true" role="button" aria-labelledby="cke_11_label" aria-haspopup="true" onkeydown="return CKEDITOR.tools.callFunction(40,event,this);" onfocus="return CKEDITOR.tools.callFunction(41,event);" onclick="CKEDITOR.tools.callFunction(39,this);return false;"><span id="cke_11_text" class="cke_combo_text cke_combo_inlinelabel">Font</span><span class="cke_combo_open"><span class="cke_combo_arrow"></span></span></a></span><span id="cke_12" class="cke_combo cke_combo__fontsize cke_combo_off" role="presentation"><span id="cke_12_label" class="cke_combo_label">Size</span><a class="cke_combo_button" title="Font Size" tabindex="-1" href="javascript:void(&#39;Font Size&#39;)" hidefocus="true" role="button" aria-labelledby="cke_12_label" aria-haspopup="true" onkeydown="return CKEDITOR.tools.callFunction(43,event,this);" onfocus="return CKEDITOR.tools.callFunction(44,event);" onclick="CKEDITOR.tools.callFunction(42,this);return false;"><span id="cke_12_text" class="cke_combo_text">12</span><span class="cke_combo_open"><span class="cke_combo_arrow"></span></span></a></span><span class="cke_toolgroup" role="presentation"><a id="cke_28" class="cke_button cke_button__textcolor cke_button_off" href="javascript:void(&#39;Tekstkleur&#39;)" title="Tekstkleur" tabindex="-1" hidefocus="true" role="button" aria-labelledby="cke_28_label" aria-haspopup="true" onkeydown="return CKEDITOR.tools.callFunction(45,event);" onfocus="return CKEDITOR.tools.callFunction(46,event);" onclick="CKEDITOR.tools.callFunction(47,this);return false;"><span class="cke_button_icon cke_button__textcolor_icon " style="background-image:url(&#39;https://us18.admin.mailchimp.com/release/1.1.1041a4e59d542af9f36023a39e5553bc59f72694c/js/ckeditor4/ckeditor/plugins/icons_hidpi.png?t=I4NI&#39;);background-position:0 -456px;background-size:16px;">&nbsp;</span><span id="cke_28_label" class="cke_button_label cke_button__textcolor_label" aria-hidden="false">Tekstkleur</span><span class="cke_button_arrow"></span></a><a id="cke_29" class="cke_button cke_button__bgcolor cke_button_off" href="javascript:void(&#39;Achtergrondkleur&#39;)" title="Achtergrondkleur" tabindex="-1" hidefocus="true" role="button" aria-labelledby="cke_29_label" aria-haspopup="true" onkeydown="return CKEDITOR.tools.callFunction(48,event);" onfocus="return CKEDITOR.tools.callFunction(49,event);" onclick="CKEDITOR.tools.callFunction(50,this);return false;"><span class="cke_button_icon cke_button__bgcolor_icon " style="background-image:url(&#39;https://us18.admin.mailchimp.com/release/1.1.1041a4e59d542af9f36023a39e5553bc59f72694c/js/ckeditor4/ckeditor/plugins/icons_hidpi.png?t=I4NI&#39;);background-position:0 -432px;background-size:16px;">&nbsp;</span><span id="cke_29_label" class="cke_button_label cke_button__bgcolor_label" aria-hidden="false">Achtergrondkleur</span><span class="cke_button_arrow"></span></a><a id="cke_30" class="cke_button cke_button__horizontalrule cke_button_off" href="javascript:void(&#39;Horizontale lijn invoegen&#39;)" title="Horizontale lijn invoegen" tabindex="-1" hidefocus="true" role="button" aria-labelledby="cke_30_label" aria-haspopup="false" onkeydown="return CKEDITOR.tools.callFunction(51,event);" onfocus="return CKEDITOR.tools.callFunction(52,event);" onclick="CKEDITOR.tools.callFunction(53,this);return false;"><span class="cke_button_icon cke_button__horizontalrule_icon " style="background-image:url(&#39;https://us18.admin.mailchimp.com/release/1.1.1041a4e59d542af9f36023a39e5553bc59f72694c/js/ckeditor4/ckeditor/plugins/icons_hidpi.png?t=I4NI&#39;);background-position:0 -984px;background-size:16px;">&nbsp;</span><span id="cke_30_label" class="cke_button_label cke_button__horizontalrule_label" aria-hidden="false">Horizontale lijn invoegen</span></a><a id="cke_31" class="cke_button cke_button__anchor cke_button_off" href="javascript:void(&#39;Interne link&#39;)" title="Interne link" tabindex="-1" hidefocus="true" role="button" aria-labelledby="cke_31_label" aria-haspopup="false" onkeydown="return CKEDITOR.tools.callFunction(54,event);" onfocus="return CKEDITOR.tools.callFunction(55,event);" onclick="CKEDITOR.tools.callFunction(56,this);return false;"><span class="cke_button_icon cke_button__anchor_icon " style="background-image:url(&#39;https://us18.admin.mailchimp.com/release/1.1.1041a4e59d542af9f36023a39e5553bc59f72694c/js/ckeditor4/ckeditor/plugins/icons_hidpi.png?t=I4NI&#39;);background-position:0 -1296px;background-size:16px;">&nbsp;</span><span id="cke_31_label" class="cke_button_label cke_button__anchor_label" aria-hidden="false">Interne link</span></a></span><span id="cke_13" class="cke_combo cke_combo__merges cke_format cke_combo_off" role="presentation"><span id="cke_13_label" class="cke_combo_label">Merge Tags</span><a class="cke_combo_button" title="Merge Tags" tabindex="-1" href="javascript:void(&#39;Merge Tags&#39;)" hidefocus="true" role="button" aria-labelledby="cke_13_label" aria-haspopup="true" onkeydown="return CKEDITOR.tools.callFunction(58,event,this);" onfocus="return CKEDITOR.tools.callFunction(59,event);" onclick="CKEDITOR.tools.callFunction(57,this);return false;"><span id="cke_13_text" class="cke_combo_text cke_combo_inlinelabel">Merge Tags</span><span class="cke_combo_open"><span class="cke_combo_arrow"></span></span></a></span><span class="cke_toolgroup" role="presentation"><a id="cke_32" class="cke_button cke_button__bidiltr cke_button_off" href="javascript:void(&#39;Schrijfrichting van links naar rechts&#39;)" title="Schrijfrichting van links naar rechts" tabindex="-1" hidefocus="true" role="button" aria-labelledby="cke_32_label" aria-haspopup="false" onkeydown="return CKEDITOR.tools.callFunction(60,event);" onfocus="return CKEDITOR.tools.callFunction(61,event);" onclick="CKEDITOR.tools.callFunction(62,this);return false;"><span class="cke_button_icon cke_button__bidiltr_icon " style="background-image:url(&#39;https://us18.admin.mailchimp.com/release/1.1.1041a4e59d542af9f36023a39e5553bc59f72694c/js/ckeditor4/ckeditor/plugins/icons_hidpi.png?t=I4NI&#39;);background-position:0 -192px;background-size:16px;">&nbsp;</span><span id="cke_32_label" class="cke_button_label cke_button__bidiltr_label" aria-hidden="false">Schrijfrichting van links naar rechts</span></a><a id="cke_33" class="cke_button cke_button__bidirtl cke_button_off" href="javascript:void(&#39;Schrijfrichting van rechts naar links&#39;)" title="Schrijfrichting van rechts naar links" tabindex="-1" hidefocus="true" role="button" aria-labelledby="cke_33_label" aria-haspopup="false" onkeydown="return CKEDITOR.tools.callFunction(63,event);" onfocus="return CKEDITOR.tools.callFunction(64,event);" onclick="CKEDITOR.tools.callFunction(65,this);return false;"><span class="cke_button_icon cke_button__bidirtl_icon " style="background-image:url(&#39;https://us18.admin.mailchimp.com/release/1.1.1041a4e59d542af9f36023a39e5553bc59f72694c/js/ckeditor4/ckeditor/plugins/icons_hidpi.png?t=I4NI&#39;);background-position:0 -216px;background-size:16px;">&nbsp;</span><span id="cke_33_label" class="cke_button_label cke_button__bidirtl_label" aria-hidden="false">Schrijfrichting van rechts naar links</span></a><a id="cke_34" class="cke_button cke_button__justifyleft cke_button_off" href="javascript:void(&#39;Links uitlijnen&#39;)" title="Links uitlijnen" tabindex="-1" hidefocus="true" role="button" aria-labelledby="cke_34_label" aria-haspopup="false" onkeydown="return CKEDITOR.tools.callFunction(66,event);" onfocus="return CKEDITOR.tools.callFunction(67,event);" onclick="CKEDITOR.tools.callFunction(68,this);return false;"><span class="cke_button_icon cke_button__justifyleft_icon " style="background-image:url(&#39;https://us18.admin.mailchimp.com/release/1.1.1041a4e59d542af9f36023a39e5553bc59f72694c/js/ckeditor4/ckeditor/plugins/icons_hidpi.png?t=I4NI&#39;);background-position:0 -1200px;background-size:16px;">&nbsp;</span><span id="cke_34_label" class="cke_button_label cke_button__justifyleft_label" aria-hidden="false">Links uitlijnen</span></a><a id="cke_35" class="cke_button cke_button__justifycenter cke_button_on" href="javascript:void(&#39;Centreren&#39;)" title="Centreren" tabindex="-1" hidefocus="true" role="button" aria-labelledby="cke_35_label" aria-haspopup="false" onkeydown="return CKEDITOR.tools.callFunction(69,event);" onfocus="return CKEDITOR.tools.callFunction(70,event);" onclick="CKEDITOR.tools.callFunction(71,this);return false;" aria-pressed="true"><span class="cke_button_icon cke_button__justifycenter_icon " style="background-image:url(&#39;https://us18.admin.mailchimp.com/release/1.1.1041a4e59d542af9f36023a39e5553bc59f72694c/js/ckeditor4/ckeditor/plugins/icons_hidpi.png?t=I4NI&#39;);background-position:0 -1176px;background-size:16px;">&nbsp;</span><span id="cke_35_label" class="cke_button_label cke_button__justifycenter_label" aria-hidden="false">Centreren</span></a><a id="cke_36" class="cke_button cke_button__justifyright cke_button_off" href="javascript:void(&#39;Rechts uitlijnen&#39;)" title="Rechts uitlijnen" tabindex="-1" hidefocus="true" role="button" aria-labelledby="cke_36_label" aria-haspopup="false" onkeydown="return CKEDITOR.tools.callFunction(72,event);" onfocus="return CKEDITOR.tools.callFunction(73,event);" onclick="CKEDITOR.tools.callFunction(74,this);return false;"><span class="cke_button_icon cke_button__justifyright_icon " style="background-image:url(&#39;https://us18.admin.mailchimp.com/release/1.1.1041a4e59d542af9f36023a39e5553bc59f72694c/js/ckeditor4/ckeditor/plugins/icons_hidpi.png?t=I4NI&#39;);background-position:0 -1224px;background-size:16px;">&nbsp;</span><span id="cke_36_label" class="cke_button_label cke_button__justifyright_label" aria-hidden="false">Rechts uitlijnen</span></a><a id="cke_37" class="cke_button cke_button__justifyblock cke_button_off" href="javascript:void(&#39;Uitvullen&#39;)" title="Uitvullen" tabindex="-1" hidefocus="true" role="button" aria-labelledby="cke_37_label" aria-haspopup="false" onkeydown="return CKEDITOR.tools.callFunction(75,event);" onfocus="return CKEDITOR.tools.callFunction(76,event);" onclick="CKEDITOR.tools.callFunction(77,this);return false;"><span class="cke_button_icon cke_button__justifyblock_icon " style="background-image:url(&#39;https://us18.admin.mailchimp.com/release/1.1.1041a4e59d542af9f36023a39e5553bc59f72694c/js/ckeditor4/ckeditor/plugins/icons_hidpi.png?t=I4NI&#39;);background-position:0 -1152px;background-size:16px;">&nbsp;</span><span id="cke_37_label" class="cke_button_label cke_button__justifyblock_label" aria-hidden="false">Uitvullen</span></a><a id="cke_38" class="cke_button cke_button__spellcheck cke_button_off" href="javascript:void(&#39;spell check&#39;)" title="spell check" tabindex="-1" hidefocus="true" role="button" aria-labelledby="cke_38_label" aria-haspopup="false" onkeydown="return CKEDITOR.tools.callFunction(78,event);" onfocus="return CKEDITOR.tools.callFunction(79,event);" onclick="CKEDITOR.tools.callFunction(80,this);return false;"><span class="cke_button_icon cke_button__spellcheck_icon " style="background-image:url(&#39;https://us18.admin.mailchimp.com/release/1.1.1041a4e59d542af9f36023a39e5553bc59f72694c/js/ckeditor4/ckeditor/plugins/icons_hidpi.png?t=I4NI&#39;);background-position:0 -24px;background-size:16px;">&nbsp;</span><span id="cke_38_label" class="cke_button_label cke_button__spellcheck_label" aria-hidden="false">spell check</span></a><a id="cke_39" class="cke_button cke_button__undo cke_button_off" href="javascript:void(&#39;Ongedaan maken&#39;)" title="Ongedaan maken" tabindex="-1" hidefocus="true" role="button" aria-labelledby="cke_39_label" aria-haspopup="false" onkeydown="return CKEDITOR.tools.callFunction(81,event);" onfocus="return CKEDITOR.tools.callFunction(82,event);" onclick="CKEDITOR.tools.callFunction(83,this);return false;"><span class="cke_button_icon cke_button__undo_icon " style="background-image:url(&#39;https://us18.admin.mailchimp.com/release/1.1.1041a4e59d542af9f36023a39e5553bc59f72694c/js/ckeditor4/ckeditor/plugins/icons_hidpi.png?t=I4NI&#39;);background-position:0 -2256px;background-size:16px;">&nbsp;</span><span id="cke_39_label" class="cke_button_label cke_button__undo_label" aria-hidden="false">Ongedaan maken</span></a><a id="cke_40" class="cke_button cke_button__redo cke_button_disabled " href="javascript:void(&#39;Opnieuw uitvoeren&#39;)" title="Opnieuw uitvoeren" tabindex="-1" hidefocus="true" role="button" aria-labelledby="cke_40_label" aria-haspopup="false" aria-disabled="true" onkeydown="return CKEDITOR.tools.callFunction(84,event);" onfocus="return CKEDITOR.tools.callFunction(85,event);" onclick="CKEDITOR.tools.callFunction(86,this);return false;"><span class="cke_button_icon cke_button__redo_icon " style="background-image:url(&#39;https://us18.admin.mailchimp.com/release/1.1.1041a4e59d542af9f36023a39e5553bc59f72694c/js/ckeditor4/ckeditor/plugins/icons_hidpi.png?t=I4NI&#39;);background-position:0 -2208px;background-size:16px;">&nbsp;</span><span id="cke_40_label" class="cke_button_label cke_button__redo_label" aria-hidden="false">Opnieuw uitvoeren</span></a></span><span class="cke_toolbar_end"></span></span></span><a title="Werkbalk inklappen" id="cke_1_toolbar_collapser" tabindex="-1" class="cke_toolbox_collapser" onclick="CKEDITOR.tools.callFunction(87)"><span class="cke_arrow">▲</span></a></span></span><div id="cke_1_contents" class="cke_contents cke_reset" role="presentation" style="height: 267.2px;"><iframe src="./Campaign Builder - Template Designer _ MailChimp_files/saved_resource.html" frameborder="0" class="cke_wysiwyg_frame cke_reset" title="Tekstverwerker, editor1" tabindex="0" allowtransparency="true" style="width: 100%; height: 100%;"></iframe></div></div></div><p class="font-weight--bold small-meta padding--lv2 dim-el hide">If an email client <a href="http://kb.mailchimp.com/campaigns/design/limitations-of-html-email" target="_blank">doesn't support web fonts</a>, we'll use a similar standard font instead.</p></div>
+            <div class="alignr padding--lv3">
+                <a href="https://us18.admin.mailchimp.com/campaigns/wizard/neapolitan?id=46491#" data-dojo-attach-point="switchContentBtn" class="button !margin-right--lv0" style="display:none;">Recovered Content</a>
+            </div>
+        </div>
+
+        <div class="mojoEditorSection styleEditorSection" data-mojo-section="style" data-dojo-attach-point="styleEditorContainer" style="display: none;"><div class="mojoStyleEditor" id="uniqName_16_0" widgetid="uniqName_16_0">
+    <div data-dojo-attach-point="styleForm" class="colbody padding-bottom--lv4">
+    	<fieldset data-dojo-attach-point="styleKbLinkWrap" class="hide-on-mobile-editor"><a data-dojo-attach-point="styleKbLink" target="_blank" href="http://kb.mailchimp.com/campaigns/content-blocks/use-text-content-blocks" class="inline-block padding--lv2 !padding-left-right--lv0 small-meta">Learn more about using Text content blocks.</a></fieldset>
+        <!-- Dynamic -->
+    <fieldset data-section-name="Text style" id="dijit__Templated_0" widgetid="dijit__Templated_0">
+    <h5 class="c-paneSectionHeader cursor-pointer" title="Click to highlight in preview." data-js-el="styleHeader" data-dojo-attach-point="headerNode">Text style</h5>
+<div class="line mojoFontInput" id="dijit__WidgetsInTemplateMixin_0" widgetid="dijit__WidgetsInTemplateMixin_0">
+    <div class="flex flex-row" data-dojo-attach-point="familyContainer"><div class="style-field selfclear style-font"><label class="c-paneLabel--small fwn padding--lv0">Font</label><table class="dijit dijitReset dijitInline dijitLeft dijitSelect dijitValidationTextBox dijitDownArrowButton !margin-bottom--lv0" data-dojo-attach-point="_buttonNode,tableNode,focusNode,_popupStateNode" cellspacing="0" cellpadding="0" role="listbox" aria-haspopup="true" tabindex="0" id="uniqName_15_0" widgetid="uniqName_15_0" aria-expanded="false" aria-invalid="false" style="user-select: none;"><tbody role="presentation"><tr role="presentation"><td class="dijitReset dijitStretch dijitButtonContents" role="presentation"><div class="dijitReset dijitInputField dijitButtonText" data-dojo-attach-point="containerNode,textDirNode" role="presentation"><span role="option" class="dijitReset dijitInline dijitSelectLabel dijitValidationTextBoxLabel ">Not specified</span></div><div class="dijitReset dijitValidationContainer"><input class="dijitReset dijitInputField dijitValidationIcon dijitValidationInner" value="Χ " type="text" tabindex="-1" readonly="readonly" role="presentation"></div><input type="hidden" data-dojo-attach-point="valueNode" value="" aria-hidden="true"></td><td class="dijitReset dijitRight dijitButtonNode dijitArrowButton dijitDownArrowButton dijitArrowButtonContainer" data-dojo-attach-point="titleNode" role="presentation"><input class="dijitReset dijitInputField dijitArrowButtonInner" value="▼ " type="text" tabindex="-1" readonly="readonly" role="presentation"></td></tr></tbody></table><p class="font-weight--bold small-meta dim-el hide">If an email client <a href="http://kb.mailchimp.com/campaigns/design/limitations-of-html-email" target="_blank">doesn't support web fonts</a>, we'll use a similar standard font instead.</p></div></div>
+
+    <div class="flex flex-row" data-dojo-attach-point="sizeColorContainer">
+        <div class="margin--lv3 margin-top-bottom--lv0 margin-left--lv0" data-dojo-attach-point="sizeContainer"><div class="style-field selfclear style-size"><label class="c-paneLabel--small fwn padding--lv0">Size</label><div class="mojoFontSizeInput relative" id="uniqName_15_1" widgetid="uniqName_15_1">
+    <div class="dijit dijitReset dijitInline dijitLeft dijitTextBox" id="widget_dijit_form_TextBox_0" role="presentation" widgetid="dijit_form_TextBox_0"><div class="dijitReset dijitInputField dijitInputContainer"><input class="dijitReset dijitInputInner" data-dojo-attach-point="textbox,focusNode" autocomplete="off" type="text" tabindex="0" id="dijit_form_TextBox_0" value=""></div></div>
+
+    <div data-dojo-attach-point="_buttonNode" class="absolute button mojoFontSizeInput_button dijitDownArrowButton">
+        <div class="freddicon menu-down !margin--lv0 valign-middle" role="presentation"></div>
+    </div>
+</div></div></div>
+        <div class="" data-dojo-attach-point="colorContainer"><div class="style-field selfclear style-color"><label class="c-paneLabel--small fwn padding--lv0">Color<a href="https://us18.admin.mailchimp.com/campaigns/wizard/neapolitan?id=46491#" class="small-meta margin--lv2" style="display: none;">Remove</a></label><div class="dijit dijitReset dijitInline dijitLeft dijitTextBox c-colorInput" id="widget_uniqName_14_0" role="presentation" widgetid="uniqName_14_0"><div class="c-colorInput_previewSwatch v-unsetSwatch" title="Color preview"></div><div class="dijitReset dijitInputField dijitInputContainer"><input class="dijitReset dijitInputInner" data-dojo-attach-point="textbox,focusNode" autocomplete="off" type="text" tabindex="0" id="uniqName_14_0" value=""></div></div></div></div>
+    </div>
+
+    <div class="flex flex-row" data-dojo-attach-point="styleAlignContainer">
+        <div class="margin--lv3 margin-top-bottom--lv0 margin-left--lv0" data-dojo-attach-point="styleContainer"><div class="style-field selfclear style-styles"><label class="c-paneLabel--small fwn padding--lv0">Styles</label><div class="mojoFontStyle flex" id="uniqName_15_3" widgetid="uniqName_15_3"><input type="checkbox" class="v-visuallyHidden v-buttonGroupControl" id="uniqName_15_3_bold" value="bold"><label for="uniqName_15_3_bold" class="v-buttonGroupLabel"><span class="freddicon text-bold"></span></label><input type="checkbox" class="v-visuallyHidden v-buttonGroupControl" id="uniqName_15_3_italic" value="italic"><label for="uniqName_15_3_italic" class="v-buttonGroupLabel"><span class="freddicon text-italics"></span></label></div></div></div>
+        <div class="" data-dojo-attach-point="alignContainer"><div class="style-field selfclear style-align"><label class="c-paneLabel--small fwn padding--lv0">Align<a href="https://us18.admin.mailchimp.com/campaigns/wizard/neapolitan?id=46491#" class="small-meta margin--lv2" style="display: none;">Remove</a></label><div class="lastGroup size1of1" id="uniqName_14_1" widgetid="uniqName_14_1">
+
+    <div class="flex">
+        <input type="radio" class="v-visuallyHidden v-buttonGroupControl" id="uniqName_14_1_left" name="uniqName_14_1_textAlign" value="left">
+        <label for="uniqName_14_1_left" class="v-buttonGroupLabel">
+            <span class="freddicon left-align" aria-label="Left align" role="img"></span>
+        </label>
+
+        <input type="radio" class="v-visuallyHidden v-buttonGroupControl" id="uniqName_14_1_center" name="uniqName_14_1_textAlign" value="center">
+        <label for="uniqName_14_1_center" class="v-buttonGroupLabel">
+            <span class="freddicon center-align" aria-label="Center align" role="img"></span>
+        </label>
+
+        <input type="radio" class="v-visuallyHidden v-buttonGroupControl" id="uniqName_14_1_right" name="uniqName_14_1_textAlign" value="right">
+        <label for="uniqName_14_1_right" class="v-buttonGroupLabel">
+            <span class="freddicon right-align" aria-label="Right align" role="img"></span>
+        </label>
+
+        <input type="radio" class="v-visuallyHidden v-buttonGroupControl" id="uniqName_14_1_justify" name="uniqName_14_1_textAlign" value="justify">
+        <label for="uniqName_14_1_justify" class="v-buttonGroupLabel">
+            <span class="freddicon justify" aria-label="Justify" role="img"></span>
+        </label>
+    </div>
+</div></div></div>
+    </div>
+
+    <div class="flex flex-row" data-dojo-attach-point="lineHeightSpacingContainer">
+        <div class="flex-grow-1 margin--lv3 margin-top-bottom--lv0 margin-left--lv0" data-dojo-attach-point="lineHeightContainer"><div class="style-field selfclear style-lineheight"><label class="c-paneLabel--small fwn padding--lv0">Line height</label><table class="dijit dijitReset dijitInline dijitLeft dijitSelect dijitValidationTextBox dijitDownArrowButton" data-dojo-attach-point="_buttonNode,tableNode,focusNode,_popupStateNode" cellspacing="0" cellpadding="0" role="listbox" aria-haspopup="true" tabindex="0" id="uniqName_15_2" widgetid="uniqName_15_2" aria-expanded="false" aria-invalid="false" style="user-select: none;"><tbody role="presentation"><tr role="presentation"><td class="dijitReset dijitStretch dijitButtonContents" role="presentation"><div class="dijitReset dijitInputField dijitButtonText" data-dojo-attach-point="containerNode,textDirNode" role="presentation"><span role="option" class="dijitReset dijitInline dijitSelectLabel dijitValidationTextBoxLabel ">Not specified</span></div><div class="dijitReset dijitValidationContainer"><input class="dijitReset dijitInputField dijitValidationIcon dijitValidationInner" value="Χ " type="text" tabindex="-1" readonly="readonly" role="presentation"></div><input type="hidden" data-dojo-attach-point="valueNode" value="" aria-hidden="true"></td><td class="dijitReset dijitRight dijitButtonNode dijitArrowButton dijitDownArrowButton dijitArrowButtonContainer" data-dojo-attach-point="titleNode" role="presentation"><input class="dijitReset dijitInputField dijitArrowButtonInner" value="▼ " type="text" tabindex="-1" readonly="readonly" role="presentation"></td></tr></tbody></table></div></div>
+
+        <div class="flex-grow-1 margin--lv3 margin-top-bottom--lv0 margin-left--lv0 hide" data-dojo-attach-point="spacingContainer"></div>
+    </div>
+
+</div></fieldset></div>
+
+    <div class="absolute pos-lr0 pos-b0 v-bg-gray-lightest border-top padding--lv3 !padding-top-bottom--lv0">
+        <div class="flex padding--lv2 !padding-left-right--lv0">
+            <div class="flex flex-two-thirds flex-center">
+                <label for="mcApplyAlluniqName_16_0" class="checkbox margin-bottom--lv0 !padding-bottom--lv0 font-weight--normal small-meta">
+                    <div class="dijit dijitReset dijitInline dijitCheckBox" role="presentation" widgetid="mcApplyAlluniqName_16_0"><input type="checkbox" role="checkbox" aria-checked="false" class="dijitReset dijitCheckBoxInput" data-dojo-attach-point="focusNode" data-dojo-attach-event="ondijitclick:_onClick" value="on" tabindex="0" id="mcApplyAlluniqName_16_0" style="user-select: none;"></div>Apply to all existing Text blocks
+                </label>
+            </div>
+            <div class="flex flex-third">
+                <div class="full-width">
+                    <button class="button !margin--lv0 float-right opacity-0 no-clicky" data-dojo-attach-point="revertBtn">Undo</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div></div>
+
+        <div class="mojoEditorSection colbody settingsEditorSection" data-mojo-section="settings" style="display: none;">
+            <fieldset>
+                <h5 class="c-paneSectionHeader">Text block settings</h5>
+                <label>Number of columns</label>
+                <table class="dijit dijitReset dijitInline dijitLeft dijitSelect dijitValidationTextBox dijitDownArrowButton" data-dojo-attach-point="_buttonNode,tableNode,focusNode,_popupStateNode" cellspacing="0" cellpadding="0" role="listbox" aria-haspopup="true" tabindex="0" id="dijit_form_Select_0" widgetid="dijit_form_Select_0" aria-expanded="false" style="user-select: none;"><tbody role="presentation"><tr role="presentation"><td class="dijitReset dijitStretch dijitButtonContents" role="presentation"><div class="dijitReset dijitInputField dijitButtonText" data-dojo-attach-point="containerNode,textDirNode" role="presentation"><span role="option" class="dijitReset dijitInline dijitSelectLabel dijitValidationTextBoxLabel ">1 column</span></div><div class="dijitReset dijitValidationContainer"><input class="dijitReset dijitInputField dijitValidationIcon dijitValidationInner" value="Χ " type="text" tabindex="-1" readonly="readonly" role="presentation"></div><input type="hidden" data-dojo-attach-point="valueNode" value="1" aria-hidden="true"></td><td class="dijitReset dijitRight dijitButtonNode dijitArrowButton dijitDownArrowButton dijitArrowButtonContainer" data-dojo-attach-point="titleNode" role="presentation"><input class="dijitReset dijitInputField dijitArrowButtonInner" value="▼ " type="text" tabindex="-1" readonly="readonly" role="presentation"></td></tr></tbody></table>
+            </fieldset>
+
+            <fieldset data-dojo-attach-point="splitSelectorSection" style="display: none;">
+                <label>Column split</label>
+                <ul class="mojoImageGroupLayoutList" data-dojo-attach-point="splitSelector">
+<li class="mojoTextSplitLayout float-left with1 selected" data-split-option="0">
+    
+        <div class="mojoTextSplitColumn with100 last"></div>
+    
+</li>
+</ul>
+            </fieldset>
+        </div>
+    </div>
+</div>
+
+    <div class="c-actionButtonsPane">
+        <button class="button p0" data-dojo-attach-event="onclick:saveAndHide">Save &amp; Close</button>
+        <span class="small-meta" data-dojo-attach-point="timestampContainer">autosaved 9:38PM West-Europa (zomertijd 5/23/18</span>
+    </div>
+</div></div></div> <div class="drawer-tab"></div> </div>  </div> <div id="hotkey-help-pane" class="c-hotkeyHelpPane position--absolute v-textColorWhite padding--lv4"> <a class="float-right v-linkColorWhite" href="https://us18.admin.mailchimp.com/campaigns/wizard/neapolitan?id=46491#" onclick="dojo.setStyle(&#39;hotkey-help-pane&#39;, &#39;display&#39;, &#39;none&#39;); return false;" title="Close"><span class="freddicon cross"></span></a> <h4 class="v-textColorWhite">Keyboard shortcuts</h4> <ul class="section"> <li><code class="c-hotkeyHelpPane_indent">ESC</code> Save and close editor, hide preview</li> <li><code class="c-hotkeyHelpPane_indent">1</code> Toggle preview mode</li> <li><code class="c-hotkeyHelpPane_indent">2</code> Send a test email</li> <li><code class="c-hotkeyHelpPane_indent">3</code> Push to mobile</li> <li><code class="c-hotkeyHelpPane_indent">H</code> Show/Hide hotkeys cheatsheet</li> </ul> <h4 class="v-textColorWhite">Text editor shortcuts</h4> <ul> <li><code class="c-hotkeyHelpPane_indent"><span class="os-key">CTRL</span> + <strong>Z</strong></code> Undo</li> <li><code class="c-hotkeyHelpPane_indent"><span class="os-key">CTRL</span> + <strong>Y</strong></code> Redo</li> <li><code class="c-hotkeyHelpPane_indent"><span class="os-key">CTRL</span> + <strong>L</strong></code> Add link</li> <li><code class="c-hotkeyHelpPane_indent"><span class="os-key">CTRL</span> + <strong>B</strong></code> <b>Bold</b> selected text</li> <li><code class="c-hotkeyHelpPane_indent"><span class="os-key">CTRL</span> + <strong>U</strong></code> <span style="text-decoration:underline;">Underline</span> selected text</li> <li><code class="c-hotkeyHelpPane_indent"><span class="os-key">CTRL</span> + <strong>I</strong></code> <i>Italicize</i> selected text</li> </ul> </div>  </div> <div style="margin-top:24px;"> <div class="lastUnit size1of1 section show-legacy-ie"> <div class="feedback-block warning " role="status"><div class="lastUnit size1of1"><div class="c-media"><div class="c-mediaImage v-isFreddicon"><span class="freddicon warn-circle"></span></div><div class="c-mediaBody--centered"><h4>MailChimp is not actively supported in Internet Explorer 9 and below.</h4><p> MailChimp works best on modern browsers. The latest versions of <a href="http://www.google.com/chrome/" target="_blank" rel="noopener noreferrer">Google Chrome</a>, <a href="http://www.getfirefox.com/" target="_blank" rel="noopener noreferrer">Firefox</a>, Safari, and Internet Explorer all work well with MailChimp. We recommend switching to one of those.<br> See our <a href="http://kb.mailchimp.com/accounts/account-setup/minimum-system-requirements?" target="_blank" rel="noopener noreferrer" data-kb-article="/accounts/account-setup/minimum-system-requirements">system requirements</a> for more information. </p></div></div></div></div> </div>  </div> <div style="display:none;">    </div> <script src="./Campaign Builder - Template Designer _ MailChimp_files/ckeditor.js.download"></script> <script type="text/javascript">
+    dojo.addOnLoad(function() {
+    if(dijit.byId('edit-content-modal')){
+        dojo.connect(dijit.byId('edit-content-modal'), 'hide', function() { window.onbeforeunload = null; });
+        dojo.connect(dijit.byId('edit-content-modal').containerNode, 'onkeypress', function(evt) {
+            key = evt.keyCode;
+            if (key == dojo.keys.ESCAPE) {
+                dojo.stopEvent(evt);
+            }
+        });
+    }
+});
+</script>           <a id="focusHack" href="https://us18.admin.mailchimp.com/campaigns/wizard/neapolitan?id=46491#"></a> </div>
+                            <form class="wizard-form" id="wizard-form" action="https://us18.admin.mailchimp.com/campaigns/wizard/html-template-post" data-mojo-challenge="false" method="POST" novalidate="novalidate"> <input type="hidden" id="post-save-redir" name="post-save-redir" value="" class="av-hidden"> <input type="hidden" name="id" class="av-hidden" value="46491" id="id">
+            
+            <div class="c-wizardNavigation full-width bg-dark small-meta fwb zin-lv2 absolute pos-t0 selfclear">  <div class="wizard-menu float-left">  <a mc:track-label="wizard" data-mc-el="wizardFreddieLogo" href="https://us18.admin.mailchimp.com/" aria-label="Main dashboard" class="wizard-freddie padding--lv3 !padding-top-bottom--lv0 float-left"> <img src="./Campaign Builder - Template Designer _ MailChimp_files/freddie_wink.svg" width="36" height="38" alt="MailChimp logo" class="freddie-logo"></a> <div id="wizard-title" class="wizard-title absolute pos-t0"> <div id="builder-header" class="wizard-header get-started"> <div class="campaign-title float-left" title="Predesigned - Art Newsletter">Feest 7 Juli</div> <a href="https://us18.admin.mailchimp.com/campaigns/wizard/neapolitan?id=46491#" title="Find out what changed and apply the newness." style="display:none;" id="update-available-link" class="vbar">Update available for this template</a> <ul class="hover-list click-to-open viewer-list inline vbar" id="viewer-list" widgetid="viewer-list" style="display: none;">
+    <li class="inline">
+        <a class="viewer-status" href="https://us18.admin.mailchimp.com/campaigns/wizard/neapolitan?id=46491#" data-dojo-attach-point="status"></a>
+        <ul class="right-edge" style="width:200px;" data-dojo-attach-point="viewerList"></ul>
+    </li>
+</ul> </div>   </div> </div>  <div class="wizard-menu wizard-header float-right">   <div id="exitnav" class="exitnav"> <div class="mobile-top-nav hover-item"><span class="c-wizardLink--top !textcolor--gray4 freddicon menu-down alignc padding--lv3"></span></div>  <nav class="wizard-menu-nav"> <ul class="linear-list small-meta selfclear">  <li class="hover-item"> <a class="c-wizardLink--top padding--lv3" href="https://us18.admin.mailchimp.com/campaigns/wizard/neapolitan?id=46491#" data-kb-help="">Help</a> </li>  <li> <ul class="hover-list small-meta"> <li class="hover-item"> <a class="c-wizardLink--top padding--lv3" href="https://us18.admin.mailchimp.com/campaigns/wizard/neapolitan?id=46491#">Preview and Test</a> <ul class="right-edge small-meta" style="width: 240px"> <li><a href="https://us18.admin.mailchimp.com/campaigns/wizard/neapolitan?id=46491#" onclick="app.togglePreview(); return false;" id="showPreview"><span class="small-meta hide-mobile float-right">1</span> Enter preview mode</a></li> <li><a onclick="mojo.utils.globalPublish(&#39;mojo/editor/toggleTestPopup&#39;); return false;" href="https://us18.admin.mailchimp.com/campaigns/wizard/neapolitan?id=46491#"><span class="small-meta hide-mobile float-right">2</span> Send a test email</a></li> <li><a href="https://us18.admin.mailchimp.com/campaigns/wizard/neapolitan?id=46491#" onclick="mojo.app.wizard.showPushToMobileDialog(); return false;"><span class="small-meta hide-mobile float-right">3</span> Push to mobile</a></li> <li><a href="https://us18.admin.mailchimp.com/campaigns/wizard/neapolitan?id=46491#" onclick="app.showLinkChecker(); return false;"><span class="small-meta hide-mobile float-right">4</span> Open Link Checker</a></li> <li class="hide-phone"><a href="https://us18.admin.mailchimp.com/campaigns/wizard/neapolitan?id=46491#" onclick="app.showShareSettings(); return false;"><span class="small-meta hide-mobile float-right">5</span> Social Cards</a></li> </ul> </li> </ul> </li>  <li class="hover-item"> <a class="c-wizardLink--top padding--lv3" href="https://us18.admin.mailchimp.com/campaigns/wizard/neapolitan?id=46491#" onclick="dijit.byId(&#39;save-template-modal&#39;).show(); return false;">Save as Template</a> </li>  <li> <ul id="wizard-exit" class="hover-list small-meta"> <li class="hover-item"> <a href="https://us18.admin.mailchimp.com/campaigns/wizard/neapolitan?id=46491#" class="c-wizardLink--top padding--lv3" onclick="return false;">Save and Exit</a> <ul class="right-edge small-meta" style="width: 142px"> <li><a data-save-on-click="" href="https://us18.admin.mailchimp.com/">Dashboard</a></li> <li><a data-save-on-click="" href="https://us18.admin.mailchimp.com/campaigns">Campaigns</a></li> <li><a data-save-on-click="" href="https://us18.admin.mailchimp.com/templates">Templates</a></li> <li><a data-save-on-click="" href="https://us18.admin.mailchimp.com/lists/">Lists</a></li> <li><a data-save-on-click="" href="https://us18.admin.mailchimp.com/reports/">Reports</a></li> <li><a data-save-on-click="" href="https://us18.admin.mailchimp.com/account/">Account</a></li> <li class="divider"></li> <li><a data-save-on-click="" href="https://us18.admin.mailchimp.com/login/out" title="Adios, Jip_Kurstjens">Log Out</a></li> </ul> </li> </ul>  </li>       </ul> </nav> </div> </div> </div> <div id="av-outer-container"></div> 
+            
+            <div id="formContent">  <input type="hidden" aria-hidden="true" id="reactivate" name="reactivate" value="" class="av-hidden">   </div> <div id="goToNextStepContainer" class="c-wizardNavigation goToNextStepContainer full-width bg-dark small-meta fwb alignc absolute pos-b0 zin-lv2">
+
+                                 <a class="c-wizardLink--step absolute pos-l0 pos-t0 zin-lv1 small-meta padding--lv3 hide-desktop" title="Go back to Template" href="https://us18.admin.mailchimp.com/campaigns/wizard/neapolitan?id=46491#" onclick="if(!dojo.hasClass(this.parentNode, &#39;current&#39;)){dojo.byId(&#39;next-step&#39;).value=&#39;template&#39;;if(typeof(editAreaLoader) != &#39;undefined&#39;){ editAreaLoader.delete_instance(&#39;html&#39;); }if(typeof(wizard_formsubmit) != &#39;undefined&#39;) { wizard_formsubmit(); } else { dojo.byId(&#39;wizard-form&#39;).submit();} } return false;"><span class="freddicon menu-left"></span><span class=" nowrap">Back</span><span class="step-details nowrap">:&nbsp;Template</span></a> <a class="c-wizardLink--step absolute pos-l0 pos-t0 zin-lv1 small-meta padding--lv3 hide-mobile" title="Go back to Template" border="0" href="https://us18.admin.mailchimp.com/campaigns/wizard/neapolitan?id=46491#" onclick="if(!dojo.hasClass(this.parentNode, &#39;current&#39;)){dojo.byId(&#39;next-step&#39;).value=&#39;template&#39;;if(typeof(editAreaLoader) != &#39;undefined&#39;){ editAreaLoader.delete_instance(&#39;html&#39;); }if(typeof(wizard_formsubmit) != &#39;undefined&#39;) { wizard_formsubmit(); } else { dojo.byId(&#39;wizard-form&#39;).submit();} } return false;"><span class="freddicon menu-left"></span>Back</a>                
+                       <a title="Save and Close" class="c-wizardButton button p1 absolute pos-r0 pos-t0 zin-lv2" href="https://us18.admin.mailchimp.com/campaigns/edit?id=46491" role="button">Save &amp; Close<span class="freddicon menu-right on-right"></span></a> 
+
+                
+                                  
+                       <div class="final-action-container absolute pos-r0 pos-t0 !margin-right--lv0 zin-lv2 small-meta padding--lv2 !padding-left-right--lv0 !padding-bottom--lv0"></div> <div class="hide-mobile" id="progress"> <ul id="progress-bar" class="progress-bar steps-2 small-meta">    <li class="progress-bar--step inline-block relative step step1 ">  <a id="step1" class="c-wizardLink--bottom small-meta padding--lv3  " href="https://us18.admin.mailchimp.com/campaigns/wizard/neapolitan?id=46491#" onclick="if(!dojo.hasClass(this.parentNode, &#39;current&#39;)){dojo.byId(&#39;next-step&#39;).value=&#39;template&#39;;if(typeof(editAreaLoader) != &#39;undefined&#39;){ editAreaLoader.delete_instance(&#39;html&#39;); }if(typeof(wizard_formsubmit) != &#39;undefined&#39;) { wizard_formsubmit(); } else { dojo.byId(&#39;wizard-form&#39;).submit();} } return false;">Template</a> </li><li class="progress-bar--step inline-block relative step step2 last">  <a id="step2" class="c-wizardLink--bottom small-meta padding--lv3  progress-bar--current" href="https://us18.admin.mailchimp.com/campaigns/wizard/neapolitan?id=46491#" onclick="if(!dojo.hasClass(this.parentNode, &#39;current&#39;)){dojo.byId(&#39;next-step&#39;).value=&#39;html&#39;;if(typeof(editAreaLoader) != &#39;undefined&#39;){ editAreaLoader.delete_instance(&#39;html&#39;); }if(typeof(wizard_formsubmit) != &#39;undefined&#39;) { wizard_formsubmit(); } else { dojo.byId(&#39;wizard-form&#39;).submit();} } return false;">Design</a> </li> </ul>  <div data-dojo-type="dijit/Tooltip" data-dojo-props="connectId:&#39;step1&#39;,position:[&#39;above&#39;]" label="Select a template for your campaign" class="dijitTooltipData" id="dijit_Tooltip_0" widgetid="dijit_Tooltip_0"></div><div data-dojo-type="dijit/Tooltip" data-dojo-props="connectId:&#39;step2&#39;,position:[&#39;above&#39;]" label="Create and customize your campaign content" class="dijitTooltipData" id="dijit_Tooltip_1" widgetid="dijit_Tooltip_1"></div> </div> </div>
+                <input type="hidden" name="__csrf_token" id="" value="81953782938d58a71291b8112fa652cfb27dc14b" class="av-hidden"><input type="hidden" name="next-step" id="next-step"></form> <script type="text/javascript">
+            if(typeof(wizard_formsubmit) != 'undefined') {
+                dojo.connect(dojo.byId('wizard-form'), 'onsubmit', wizard_formsubmit);
+            }
+        </script>
+        
+        </div>    <div class="bottom-page absolute pos-b0"></div>  
+<div class="dijitDialog" role="dialog" aria-labelledby="edit-content-modal_title" id="edit-content-modal" widgetid="edit-content-modal" style="width: 95%; height: 450px; display: none; position: absolute;">
+	<div data-dojo-attach-point="titleBar" class="dijitDialogTitleBar">
+		<span data-dojo-attach-point="titleNode" class="dijitDialogTitle" id="edit-content-modal_title" role="heading" level="1">Edit Your Content</span>
+		<span data-dojo-attach-point="closeButtonNode" class="dijitDialogCloseIcon" data-dojo-attach-event="ondijitclick: onCancel" title="Annuleren" role="button" tabindex="-1">
+			<span data-dojo-attach-point="closeText" class="closeText" title="Annuleren">x</span>
+		</span>
+	</div>
+	<div data-dojo-attach-point="containerNode" class="dijitDialogPaneContent"> <div class="dijitDialogPaneContentArea nobar" style="max-height: none"> <div class="save-block padding--lv1 !padding-left-right--lv0 float-right"> <span id="content-txt-savemsg" class="padding--lv3 !padding-top-bottom--lv0 small-meta">Autosaved every 20 seconds</span> <button class="button p0 disabled !margin-right--lv0" id="content-saving-btn" style="display:none;">Saving...</button> <span class="dijit dijitReset dijitInline dijitButton button p0 !margin-right--lv0" role="presentation" widgetid="content-save-btn"><span class="dijitReset dijitInline dijitButtonNode" data-dojo-attach-event="ondijitclick:__onClick" role="presentation"><span class="dijitReset dijitStretch dijitButtonContents" data-dojo-attach-point="titleNode,focusNode" role="button" aria-labelledby="content-save-btn_label" tabindex="0" id="content-save-btn" style="user-select: none;"><span class="dijitReset dijitInline dijitIcon dijitNoIcon" data-dojo-attach-point="iconNode"></span><span class="dijitReset dijitToggleButtonIconChar">●</span><span class="dijitReset dijitInline dijitButtonText" id="content-save-btn_label" data-dojo-attach-point="containerNode">Save &amp; Close</span></span></span><input type="button" value="" class="dijitOffScreen" data-dojo-attach-event="onclick:_onClick" tabindex="-1" role="presentation" aria-hidden="true" data-dojo-attach-point="valueNode"></span> </div> <div id="fckeditor-block" style="clear: both;"></div>
+                            <script type="text/javascript">
+
+    require(["dojo/dom", "dojo/query","dojo/dom-class", "dojo/on", "mojo/utils", "dojo/ready"], function(dom, query, domClass, on, utils, ready){
+
+        ready(function(){
+            var mergeTagLabel = dojo.query('.merge-tag-cheatsheet')[0];
+            var merges = dojo.byId('merges-list');
+
+            if(true) {
+                var merges = dom.byId('merges-list');
+                query('tbody tr', merges).forEach(function(row) {
+                    var cells = row.getElementsByTagName('td');
+                    var mergetag = cells[1].innerHTML;
+                    cells[1].innerHTML = '<input type="text" value="' + mergetag + '" onclick="this.select();" readonly>';
+                });
+            }
+
+            if(mergeTagLabel){
+                on(mergeTagLabel, "click", function(){
+                   utils.toggleEl(mergeTagLabel, 'merges-list');
+                   domClass.toggle(mergeTagLabel, 'disclosure-closed');
+                   domClass.toggle(mergeTagLabel, 'disclosure-open');
+                });
+            }
+
+        });
+
+    });
+</script> <div class="merge-cheatsheet">  <label class="merge-tag-cheatsheet disclosure-closed">Merge tag cheat sheet</label> <div id="merges-list" class="merges" style="display: none;"> <table class="mc-table scroll-small"> <thead> <tr class="odd"> <th>To insert...</th> <th class="persistent">Use this *|MERGETAG|*</th> </tr> </thead>  </table> </div> </div> 
+                    </div> </div>
+	
+</div><div class="dijitDialog" role="dialog" aria-labelledby="edit-content-disabled_title" id="edit-content-disabled" widgetid="edit-content-disabled" style="display: none; position: absolute;">
+	<div data-dojo-attach-point="titleBar" class="dijitDialogTitleBar">
+		<span data-dojo-attach-point="titleNode" class="dijitDialogTitle" id="edit-content-disabled_title" role="heading" level="1">Content Editing Disabled</span>
+		<span data-dojo-attach-point="closeButtonNode" class="dijitDialogCloseIcon" data-dojo-attach-event="ondijitclick: onCancel" title="Annuleren" role="button" tabindex="-1">
+			<span data-dojo-attach-point="closeText" class="closeText" title="Annuleren">x</span>
+		</span>
+	</div>
+	<div data-dojo-attach-point="containerNode" class="dijitDialogPaneContent"> <div class="dijitDialogPaneContentArea nobar" style="max-height: none"> <p> This is a preview of a the template edit area. Content editing will be available when editing a real campaign using this template. </p> </div> </div>
+	
+</div><div class="dijitDialog" role="dialog" aria-labelledby="edit-imagetext-modal_title" id="edit-imagetext-modal" widgetid="edit-imagetext-modal" style="width: 95%; max-width: 800px; height: 400px; display: none; position: absolute;">
+	<div data-dojo-attach-point="titleBar" class="dijitDialogTitleBar">
+		<span data-dojo-attach-point="titleNode" class="dijitDialogTitle" id="edit-imagetext-modal_title" role="heading" level="1">Edit Your Content</span>
+		<span data-dojo-attach-point="closeButtonNode" class="dijitDialogCloseIcon" data-dojo-attach-event="ondijitclick: onCancel" title="Annuleren" role="button" tabindex="-1">
+			<span data-dojo-attach-point="closeText" class="closeText" title="Annuleren">x</span>
+		</span>
+	</div>
+	<div data-dojo-attach-point="containerNode" class="dijitDialogPaneContent"> <div class="dijitDialogPaneContentArea nobar" style="max-height: none"> <div class="save-block padding--lv1 !padding-left-right--lv0 float-right"> <span id="content-imgtxt-savemsg" class="padding--lv3 !padding-top-bottom--lv0 small-meta">Autosaved every 20 seconds</span> <span class="dijit dijitReset dijitInline dijitButton button p0 !margin-right--lv0" role="presentation" widgetid="dijit_form_Button_0"><span class="dijitReset dijitInline dijitButtonNode" data-dojo-attach-event="ondijitclick:__onClick" role="presentation"><span class="dijitReset dijitStretch dijitButtonContents" data-dojo-attach-point="titleNode,focusNode" role="button" aria-labelledby="dijit_form_Button_0_label" tabindex="0" id="dijit_form_Button_0" style="user-select: none;"><span class="dijitReset dijitInline dijitIcon dijitNoIcon" data-dojo-attach-point="iconNode"></span><span class="dijitReset dijitToggleButtonIconChar">●</span><span class="dijitReset dijitInline dijitButtonText" id="dijit_form_Button_0_label" data-dojo-attach-point="containerNode">Save &amp; Close</span></span></span><input type="submit" value="" class="dijitOffScreen" data-dojo-attach-event="onclick:_onClick" tabindex="-1" role="presentation" aria-hidden="true" data-dojo-attach-point="valueNode"></span> </div> <div id="fckeditor-image-block" style="clear: both;"></div> </div> </div>
+	
+</div><div class="dijitDialog" role="dialog" aria-labelledby="send-test-modal_title" id="send-test-modal" style="display: none; width: 600px; position: absolute;" widgetid="send-test-modal">
+	<div data-dojo-attach-point="titleBar" class="dijitDialogTitleBar">
+		<span data-dojo-attach-point="titleNode" class="dijitDialogTitle" id="send-test-modal_title" role="heading" level="1">Send a Test</span>
+		<span data-dojo-attach-point="closeButtonNode" class="dijitDialogCloseIcon" data-dojo-attach-event="ondijitclick: onCancel" title="Annuleren" role="button" tabindex="-1">
+			<span data-dojo-attach-point="closeText" class="closeText" title="Annuleren">x</span>
+		</span>
+	</div>
+	<div data-dojo-attach-point="containerNode" class="dijitDialogPaneContent">  <script>
+    require([
+        "dojo/query",
+        "dojo/dom-class",
+        "dojo/on",
+        "dijit/registry",
+        "dojo/ready"
+    ], function(query, domClass, on, registry, ready){
+        ready(function(){
+            if(registry.byId("test-specific-email")){
+                var childCheckWrap = query(".test-child-campaigns")[0];
+                var specificEmailOption = registry.byId("test-specific-email");
+
+                on(specificEmailOption, "change", function(e){
+                    if(this.checked) {
+                        childCheckWrap.style.display = 'block';
+                    } else {
+                        childCheckWrap.style.display = 'none';
+                    }
+                });
+            }
+        });
+    });
+</script> <div id="send-test-form"> <div class="dijitDialogPaneContentArea"> <div id="test-limit-warning" class="feedback-block info section hide"> <div class="lastUnit size1of1"> <div class="media"> <div class="media-image"><span class="freddicon info-circle"></span></div> <div class="media-body"> <h4>Sending a lot of tests?</h4> <p>Testing your email is always a good idea, but there are some limits on the number of tests that you can send. <a href="http://kb.mailchimp.com/campaigns/previews-and-tests/about-test-email-sending-limits?" target="_blank" rel="noopener noreferrer" data-kb-article="/campaigns/previews-and-tests/about-test-email-sending-limits">Learn more</a> </p> </div> </div> </div> </div>   <label for="test-email">Send a test to</label> <div class="field-wrapper"> <input type="email" id="test-email" onkeydown="mojo.app.wizard.handleSendTestKeyPress(event);" name="test-email" tabindex="1" value="kurst100@gmail.com" placeholder="Ex: freddie@mailchimp.com, mannie@mandrill.com..." class="av-email"> <span class="field-help always-show">Use commas to separate multiple emails.</span> </div>                  <label for="test-message" class="disclosure-closed border-above !margin-bottom--lv2" onclick="mojo.utils.disclosureElement(&#39;top-bar&#39;, this, true);"> Include instructions and a personal message <span class="small-meta">(optional)</span> </label> <div id="top-bar" class="padding--lv2 !padding-top-bottom--lv0 !padding-right--lv0" style="display:none;"> <textarea type="text" id="test-message" class="!margin-bottom--lv2" name="test-message" tabindex="1" placeholder="Ex: Hi folks. Please make sure you are OK with the header image. Thanks!"></textarea> </div>         
+    </div> <div class="dijitDialogPaneActionBar"> <div class="float-left">
+                                    <input type="button" class="button p0 send-test-button" value="Send Test" onclick="mojo.app.wizard.sendTest(null, &#39;campaign&#39;, 46491, this); return false;" tabindex="2">
+                                    <a onclick="dijit.byId(&#39;send-test-modal&#39;).hide(); return false;" href="https://us18.admin.mailchimp.com/campaigns/wizard/neapolitan?id=46491#" tabindex="4">Cancel</a> </div> <div class="float-right small-meta link-underline dim-el"> <a href="http://mailchimp.com/legal/privacy/" target="_blank" title="Privacy Policy" class="nolink" rel="noopener noreferrer">Privacy</a> and <a href="http://mailchimp.com/legal/terms/" target="_blank" title="Terms of Use" class="nolink" rel="noopener noreferrer">Terms</a> </div> </div> </div> <div id="send-test-success" style="display: none;"> <div class="dijitDialogPaneContentArea"> <div class="feedback-block success section"> <div class="unit size1of1"> <div class="media"> <div class="media-image"> <span class="freddicon tick-circle"></span> </div> <div class="media-body"> <h4>Bon voyage, test email!</h4> <p> Your test email is on its way to the test recipients. <a onclick="ga(&#39;send&#39;, &#39;event&#39;, window.location.pathname, &#39;help link&#39;, &#39;list of things you might check&#39;);" href="http://kb.mailchimp.com/campaigns/previews-and-tests/email-campaign-testing-tips?" target="_blank" rel="noopener noreferrer" data-kb-article="/campaigns/previews-and-tests/email-campaign-testing-tips">email testing tips</a> </p> <p class="small-meta"><strong>P.S.</strong> Recipients can reply to your test emails. Their feedback will show up in the comments tab.</p> </div> </div> </div> </div> <div id="send-test-samedomain" class="feedback-block warning section" style="display: none;"> <div class="unit size1of1"> <div class="media"> <div class="media-body  "> <p> <strong>Note:</strong> When you send to an email address using the same domain in the reply-to (), it can sometimes trigger Gmail and others to categorize it as spam. Check your junk mail if the test doesn't arrive in your inbox.
+                        </p> </div> </div> </div> </div> </div> <div class="dijitDialogPaneActionBar"> <button onclick="dijit.byId(&#39;send-test-modal&#39;).hide(); return false;" class="button p0 finish-tests">Ok</button> <a href="https://us18.admin.mailchimp.com/campaigns/wizard/neapolitan?id=46491#" onclick="mojo.app.wizard.resetSendTestDialog(); dojo.byId(&#39;test-email&#39;).focus();return false;">Send another test email</a> </div> </div> <div id="send-test-error" style="display: none;"> <div class="dijitDialogPaneContentArea"> <div class="feedback-block warning section"> <div class="unit size1of1"> <div class="media"> <div class="media-image"> <span class="freddicon warn-circle-large"></span> </div> <div class="media-body"> <h4>We were unable to complete all test sends</h4> <p>View details below.</p> </div> </div> </div> </div> <div id="send-test-error-message"></div> </div> <div class="dijitDialogPaneActionBar"> <button onclick="dijit.byId(&#39;send-test-modal&#39;).hide(); return false;" class="button p0 finish-tests">Ok</button> <a href="https://us18.admin.mailchimp.com/campaigns/wizard/neapolitan?id=46491#" onclick="mojo.app.wizard.resetSendTestDialog(); dojo.byId(&#39;test-email&#39;).focus();return false;">Send another test email</a> </div> </div>  </div>
+	
+</div><div class="dijitDialog" role="dialog" aria-labelledby="push-mobile-dialog_title" id="push-mobile-dialog" style="display: none; width: 600px; position: absolute;" widgetid="push-mobile-dialog">
+	<div data-dojo-attach-point="titleBar" class="dijitDialogTitleBar">
+		<span data-dojo-attach-point="titleNode" class="dijitDialogTitle" id="push-mobile-dialog_title" role="heading" level="1">Push to MailChimp's Mobile App</span>
+		<span data-dojo-attach-point="closeButtonNode" class="dijitDialogCloseIcon" data-dojo-attach-event="ondijitclick: onCancel" title="Annuleren" role="button" tabindex="-1">
+			<span data-dojo-attach-point="closeText" class="closeText" title="Annuleren">x</span>
+		</span>
+	</div>
+	<div data-dojo-attach-point="containerNode" class="dijitDialogPaneContent">  <div class="dijitDialogPaneContentArea nobar"> <p> Preview your campaigns on your mobile device with the MailChimp app. Simply install the MailChimp app on your device, select the "Push to mobile" option on your desktop, and check your device for a notification. </p> <ul class="linear-list line section"> <li class="padding--lv1"><a target="_blank" title="Download for iPhone on the App Store" href="http://itunes.apple.com/us/app/mailchimp/id366794783" rel="noopener noreferrer"><img alt="Available on the iPhone App Store" height="52" src="./Campaign Builder - Template Designer _ MailChimp_files/mobile-dl-iphone.png"></a></li> <li class="padding--lv1"><a target="_blank" title="Download for Android on Google Play" href="https://play.google.com/store/apps/details?id=com.mailchimp.mailchimp" rel="noopener noreferrer"><img alt="Available for Android on Google Play" height="52" src="./Campaign Builder - Template Designer _ MailChimp_files/mobile-dl-android.png"></a></li> </ul> <p class="small-meta">Note: If you've previously installed the app and see this, please upgrade it for preview support.</p> </div>  </div>
+	
+</div><div class="dijitDialog" role="dialog" aria-labelledby="save-template-modal_title" id="save-template-modal" widgetid="save-template-modal" style="display: none; position: absolute;">
+	<div data-dojo-attach-point="titleBar" class="dijitDialogTitleBar">
+		<span data-dojo-attach-point="titleNode" class="dijitDialogTitle" id="save-template-modal_title" role="heading" level="1">Save as Template</span>
+		<span data-dojo-attach-point="closeButtonNode" class="dijitDialogCloseIcon" data-dojo-attach-event="ondijitclick: onCancel" title="Annuleren" role="button" tabindex="-1">
+			<span data-dojo-attach-point="closeText" class="closeText" title="Annuleren">x</span>
+		</span>
+	</div>
+	<div data-dojo-attach-point="containerNode" class="dijitDialogPaneContent"></div>
+	
+</div><div class="dijitDialog" role="dialog" aria-labelledby="save-template-complete_title" id="save-template-complete" widgetid="save-template-complete" style="display: none; position: absolute;">
+	<div data-dojo-attach-point="titleBar" class="dijitDialogTitleBar">
+		<span data-dojo-attach-point="titleNode" class="dijitDialogTitle" id="save-template-complete_title" role="heading" level="1">Template Saved</span>
+		<span data-dojo-attach-point="closeButtonNode" class="dijitDialogCloseIcon" data-dojo-attach-event="ondijitclick: onCancel" title="Annuleren" role="button" tabindex="-1">
+			<span data-dojo-attach-point="closeText" class="closeText" title="Annuleren">x</span>
+		</span>
+	</div>
+	<div data-dojo-attach-point="containerNode" class="dijitDialogPaneContent"> <div class="dijitDialogPaneContentArea"> <p>Your template has been saved, and will appear under "Saved Templates" whenever you create a new campaign.</p> <div class="dijitDialogPaneActionBar"> <span class="dijit dijitReset dijitInline dijitButton button p0" role="presentation" widgetid="dijit_form_Button_1"><span class="dijitReset dijitInline dijitButtonNode" data-dojo-attach-event="ondijitclick:__onClick" role="presentation"><span class="dijitReset dijitStretch dijitButtonContents" data-dojo-attach-point="titleNode,focusNode" role="button" aria-labelledby="dijit_form_Button_1_label" tabindex="0" id="dijit_form_Button_1" style="user-select: none;"><span class="dijitReset dijitInline dijitIcon dijitNoIcon" data-dojo-attach-point="iconNode"></span><span class="dijitReset dijitToggleButtonIconChar">●</span><span class="dijitReset dijitInline dijitButtonText" id="dijit_form_Button_1_label" data-dojo-attach-point="containerNode">Return to Campaign</span></span></span><input type="submit" value="" class="dijitOffScreen" data-dojo-attach-event="onclick:_onClick" tabindex="-1" role="presentation" aria-hidden="true" data-dojo-attach-point="valueNode"></span> </div> </div> </div>
+	
+</div><div class="dijitDialog" role="dialog" aria-labelledby="comment-delete-dialog_title" id="comment-delete-dialog" style="width: 40%; display: none; position: absolute;" widgetid="comment-delete-dialog">
+	<div data-dojo-attach-point="titleBar" class="dijitDialogTitleBar">
+		<span data-dojo-attach-point="titleNode" class="dijitDialogTitle" id="comment-delete-dialog_title" role="heading" level="1">Are you sure?</span>
+		<span data-dojo-attach-point="closeButtonNode" class="dijitDialogCloseIcon" data-dojo-attach-event="ondijitclick: onCancel" title="Annuleren" role="button" tabindex="-1">
+			<span data-dojo-attach-point="closeText" class="closeText" title="Annuleren">x</span>
+		</span>
+	</div>
+	<div data-dojo-attach-point="containerNode" class="dijitDialogPaneContent"> <div class="dijitDialogPaneContentArea"> <p class="!margin--lv0">You're about to delete this comment.</p> <p class="warning">Deleting this comment will delete the entire conversation.</p> <div class="dijitDialogPaneActionBar"> <span class="dijit dijitReset dijitInline dijitButton button p0" role="presentation" widgetid="dijit_form_Button_2"><span class="dijitReset dijitInline dijitButtonNode" data-dojo-attach-event="ondijitclick:__onClick" role="presentation"><span class="dijitReset dijitStretch dijitButtonContents" data-dojo-attach-point="titleNode,focusNode" role="button" aria-labelledby="dijit_form_Button_2_label" tabindex="0" id="dijit_form_Button_2" style="user-select: none;"><span class="dijitReset dijitInline dijitIcon dijitNoIcon" data-dojo-attach-point="iconNode"></span><span class="dijitReset dijitToggleButtonIconChar">●</span><span class="dijitReset dijitInline dijitButtonText" id="dijit_form_Button_2_label" data-dojo-attach-point="containerNode">Delete</span></span></span><input type="submit" value="" class="dijitOffScreen" data-dojo-attach-event="onclick:_onClick" tabindex="-1" role="presentation" aria-hidden="true" data-dojo-attach-point="valueNode"></span> <a href="https://us18.admin.mailchimp.com/campaigns/wizard/neapolitan?id=46491#" onclick="dijit.byId(&#39;comment-delete-dialog&#39;).hide(); return false;">Cancel</a> </div> </div> </div>
+	
+</div><div class="dijitToasterClip" dojoattachpoint="clipNode" id="toast" style="display: none;" widgetid="toast"><div class="dijitToasterContainer" dojoattachpoint="containerNode" dojoattachevent="onclick:onSelect" style="opacity: 1;"><div class="dijitToasterContent" dojoattachpoint="contentNode"></div></div></div><div class="dijitDialog" role="dialog" aria-labelledby="popup-win-blocked_title" id="popup-win-blocked" style="display: none; position: absolute;" widgetid="popup-win-blocked">
+	<div data-dojo-attach-point="titleBar" class="dijitDialogTitleBar">
+		<span data-dojo-attach-point="titleNode" class="dijitDialogTitle" id="popup-win-blocked_title" role="heading" level="1">Pop-up Windows Are Blocked</span>
+		<span data-dojo-attach-point="closeButtonNode" class="dijitDialogCloseIcon" data-dojo-attach-event="ondijitclick: onCancel" title="Annuleren" role="button" tabindex="-1">
+			<span data-dojo-attach-point="closeText" class="closeText" title="Annuleren">x</span>
+		</span>
+	</div>
+	<div data-dojo-attach-point="containerNode" class="dijitDialogPaneContent"> <div class="dijitDialogPaneContentArea"> <p>Looks like your browser is blocking pop-up windows.<br>Learn how to <a href="http://kb.mailchimp.com/campaigns/previews-and-tests/enable-pop-ups-in-your-browser/?" class="info" target="_blank" rel="noopener noreferrer" data-kb-article="/campaigns/previews-and-tests/enable-pop-ups-in-your-browser/">enable them</a>.</p> </div> <div class="dijitDialogPaneActionBar"> <a href="https://us18.admin.mailchimp.com/campaigns/wizard/neapolitan?id=46491#" class="button p0" onclick="dijit.byId(&#39;popup-win-blocked&#39;).hide(); return false;" role="button">Close</a> </div> </div>
+	
+</div><div class="dojoxColorPicker " dojoattachevent="onkeypress: _handleKey" cellpadding="0" cellspacing="0" widgetid="mojo_neapolitan_widgets_ColorPicker_0" style="display: none;">
+    <div class="dojoxColorPickers">
+        <div class="dojoxColorPickerBox">
+            <!-- Forcing absolute positioning in style attr due to dojo DND issue with not picking it up from the class. -->
+            <div role="status" title="Intensiteit selecteren" alt="Intensiteit selecteren" class="dojoxColorPickerPoint" tabindex="0" dojoattachpoint="cursorNode" style="position: absolute; top: -5px; left: -5px;"></div>
+            <img role="presentation" alt="" dojoattachpoint="colorUnderlay" class="dojoxColorPickerUnderlay" src="./Campaign Builder - Template Designer _ MailChimp_files/underlay.png" ondragstart="return false" style="background-color: rgb(255, 0, 0);">
+        </div>
+
+        <div class="dojoxHuePicker">
+            <!-- Forcing absolute positioning in style attr due to dojo DND issue with not picking it up from the class. -->
+            <div class="dojoxHuePickerPoint" dojoattachpoint="hueCursorNode" role="status" style="position: absolute; top: 146px; left: 0px;"></div>
+            <div class="dojoxHuePickerUnderlay" dojoattachpoint="hueNode" dojoattachevent="onclick: _setHuePoint, onmousedown: _stopDrag" role="presentation"></div>
+        </div>
+
+        <div dojoattachpoint="previewNode" class="dojoxColorPickerPreview" style="display: none; background-color: rgb(255, 255, 255);"></div>
+        <div dojoattachpoint="safePreviewNode" class="dojoxColorPickerWebSafePreview" style="display: none; background-color: rgb(255, 255, 255);"></div>
+    </div>
+
+    <div class="dojoxColorPickerOptional">
+        <label class="dojoxColorPickerControl dojoxColorPickerHex" aria-live="polite" dojoattachpoint="hexNode">
+            Hex
+            <input class="dojoxColorPickerHexCode" dojoattachpoint="hexCode, focusNode, valueNode" type="text" id="mojo_neapolitan_widgets_ColorPicker_0" placeholder="#000000" dojoattachevent="onchange: _colorInputChange" tabindex="0">
+        </label>
+        <div class="dojoxColorPickerRgb" dojoattachpoint="rgbNode">
+            <label class="dojoxColorPickerControl">
+                r
+                <input id="_0_r" class="dojoxColorPickerRgbInput dojoxColorPickerRgbInput--left" dojoattachpoint="Rval" size="1" dojoattachevent="onchange: _colorInputChange" type="number" placeholder="0">
+            </label>
+            <label class="dojoxColorPickerControl">
+                g
+                <input id="_0_g" class="dojoxColorPickerRgbInput dojoxColorPickerRgbInput--middle" dojoattachpoint="Gval" size="1" dojoattachevent="onchange: _colorInputChange" type="number" placeholder="0">
+            </label>
+            <label class="dojoxColorPickerControl">
+                b
+                <input id="_0_b" class="dojoxColorPickerRgbInput dojoxColorPickerRgbInput--right" dojoattachpoint="Bval" size="1" dojoattachevent="onchange: _colorInputChange" type="number" placeholder="0">
+            </label>
+        </div>
+        <div class="dojoxColorPickerHsv" dojoattachpoint="hsvNode" style="display: none;">
+            <label for="_0_h">t</label><input id="_0_h" dojoattachpoint="Hval" size="1" dojoattachevent="onchange: _colorInputChange"> °<br>
+            <label for="_0_s">i</label><input id="_0_s" dojoattachpoint="Sval" size="1" dojoattachevent="onchange: _colorInputChange"> %<br>
+            <label for="_0_v">h</label><input id="_0_v" dojoattachpoint="Vval" size="1" dojoattachevent="onchange: _colorInputChange"> %<br>
+        </div>
+    </div>
+
+    <div class="mojoCustomColorContainer" data-dojo-attach-point="defaultColorNode">
+        <ul class="mojoCustomColors"><li style="background:#222222" class="mojoCustomColor">&nbsp;</li><li style="background:#ffffff" class="mojoCustomColor">&nbsp;</li><li style="background:#EA5B3A" class="mojoCustomColor">&nbsp;</li><li style="background:#FFD249" class="mojoCustomColor">&nbsp;</li><li style="background:#E0629A" class="mojoCustomColor">&nbsp;</li><li style="background:#89D085" class="mojoCustomColor">&nbsp;</li><li style="background:#4CAAD8" class="mojoCustomColor">&nbsp;</li></ul>
+    </div>
+
+    <div class="mojoCustomColorContainer mojoCustomColorContainer--special" data-dojo-attach-point="noColorNode" style="display:none;">
+        <ul class="mojoCustomColors mojoCustomColors--special">
+            <li class="mojoCustomColor mojoCustomColor--special">No Color</li>
+        </ul>
+    </div>
+
+    <!-- If we have site colors -->
+    <div class="mojoCustomColorContainer" data-dojo-attach-point="siteColorNode" style="display: none;">
+        <label class="mojoCustomColorLabel" title="Colors from http://www.yoursite.com">Your Site Colors <span>(<a href="https://us18.admin.mailchimp.com/campaigns/wizard/neapolitan?id=46491#">Select Site</a>)</span></label>
+        <ul class="mojoCustomColors"><li style="background:#03050C" class="mojoCustomColor">&nbsp;</li><li style="background:#080A16" class="mojoCustomColor">&nbsp;</li><li style="background:#202035" class="mojoCustomColor">&nbsp;</li><li style="background:#070916" class="mojoCustomColor">&nbsp;</li><li style="background:#00010D" class="mojoCustomColor">&nbsp;</li><li style="background:#FFCCCC" class="mojoCustomColor">&nbsp;</li><li style="background:#18192A" class="mojoCustomColor">&nbsp;</li><li style="background:#FFFFFF" class="mojoCustomColor">&nbsp;</li><li style="background:#000000" class="mojoCustomColor">&nbsp;</li><li style="background:#501254" class="mojoCustomColor">&nbsp;</li><li style="background:#090B17" class="mojoCustomColor">&nbsp;</li></ul>
+    </div>
+    <!-- If we don't have site colors -->
+    <div class="mojoCustomColorContainer" data-dojo-attach-point="siteColorForm" style="display: none;">
+        <label class="mojoCustomColorLabel">Get Site Colors From</label>
+        <input type="url">
+        <a href="https://us18.admin.mailchimp.com/campaigns/wizard/neapolitan?id=46491#">Go</a>
+    </div>
+    <div class="dojoxColorPickerArrow" data-dojo-attach-point="arrow"></div>
+</div><div lang="nl" id="cke_52" dir="ltr" class="cke cke_reset_all cke_1 cke_panel cke_combopanel cke_ltr" style="z-index: 10001; position: absolute; top: 229px; left: 1020px; opacity: 1; display: none;" role="presentation"><iframe id="cke_52_frame" class="cke_panel_frame" role="presentation" frameborder="0" src="./Campaign Builder - Template Designer _ MailChimp_files/saved_resource(1).html"></iframe></div></body></html>

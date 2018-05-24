@@ -16,6 +16,9 @@ security:
                 inkoper:
                   password: inkoper1
                   roles: 'ROLE_INKOOP'
+                verkoper:
+                  password: inkoper1
+                  roles: 'ROLE_VERKOOP'
 
     access_control:
       - { path: ^/artikel/nieuw, roles: ROLE_INKOOP }
@@ -39,4 +42,7 @@ security:
             http_basic:
 
             # https://symfony.com/doc/current/security/form_login_setup.html
-            #form_login: ~
+
+            #form_login:
+            #    login_path: /login
+            #    check_path: /login_check
